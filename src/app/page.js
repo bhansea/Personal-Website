@@ -1,95 +1,61 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="index-page">
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home Page</title>
+        <link rel="icon" href="/assets/img/favicon.png" />
+      </Head>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      <header id="header" className="header sticky-top">
+        <div className="container-fluid d-flex align-items-center justify-content-between">
+          <Link href="/">
+            <h1 className="sitename">Brandon</h1>
+          </Link>
+          <nav id="navmenu" className="navmenu">
+            <ul>
+              <li><Link href="/" className="active">Home</Link></li>
+              <li><Link href="/about">About</Link></li>
+              <li><Link href="/resume">Resume</Link></li>
+              <li><Link href="/photos">Photos</Link></li>
+              <li className="dropdown">
+                <a href="#"><span>Dropdown</span></a>
+              </li>
+              <li><Link href="/contact">Contact</Link></li>
+            </ul>
+          </nav>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </header>
+
+      <section id="hero" className="hero">
+        <Image src="/assets/img/hero-bg.jpg" alt="Hero Background" layout="fill" objectFit="cover" />
+        <div className="container text-center">
+          <div className="transparent-box">
+            <Image src="/assets/img/profile-img.jpg" alt="Brandon Luong" width={200} height={200} className="profile-image" />
+            <h2>Brandon Luong</h2>
+            <p>I&apos;m an aspiring software engineer from Connecticut</p>
+            <Link href="/about" className="btn-get-started">About Me</Link>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer" className="footer">
+        <div className="container">
+          <p>© Brandon. All Rights Reserved.</p>
+          <div className="social-links">
+            <a href="#"><i className="bi bi-linkedin"></i></a>
+          </div>
+        </div>
       </footer>
+
+      <a href="#" id="scroll-top" className="scroll-top">
+        <i className="bi bi-arrow-up-short"></i>
+      </a>
     </div>
   );
 }
