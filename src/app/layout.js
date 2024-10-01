@@ -56,18 +56,38 @@ export default function RootLayout({ children }) {
         {children}
 
         {/* Footer */}
-        <footer id="footer" className="footer">
+        <footer id="footer" className="footer light-background">
           <div className="container">
-            <p>© Brandon. All Rights Reserved.</p>
-            <div className="social-links">
-              <a href="https://www.linkedin.com/in/brandon-luong-12-/"
-                 target="_blank"
-                 rel="noopener noreferrer">
+            <div className="copyright text-center">
+              <p>
+                © <span>Copyright</span>
+                <strong className="px-1 sitename">Brandon.</strong>
+                <span>All Rights Reserved.<br /></span>
+              </p>
+            </div>
+            <div className="social-links d-flex justify-content-center">
+              <a
+                href="https://www.linkedin.com/in/brandon-luong-12-/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i className="bi bi-linkedin"></i>
+              </a>
+            </div>
+            <div className="credits">
+              Designed by{" "}
+              <a
+                href="https://bootstrapmade.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                BootstrapMade
               </a>
             </div>
           </div>
         </footer>
+
+
       </body>
     </html>
   );
