@@ -36,7 +36,6 @@ export default function RootLayout({ children }) {
                 <li><Link href="/about">About</Link></li>
                 <li><Link href="/resume">Resume</Link></li>
                 <li><Link href="/photos">Photos</Link></li>
-                <li><Link href="#">Dropdown</Link></li>
                 <li><Link href="/contact">Contact</Link></li>
               </ul>
             </nav>
