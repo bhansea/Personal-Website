@@ -708,7 +708,7 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-.hero {
+/* .hero {
   width: 100%;
   min-height: calc(100vh - 82px);
   position: relative;
@@ -716,6 +716,20 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh; delete?
+}
+ */
+
+ .hero {
+  position: relative;
+  text-align: center;
+  background-image: url('/assets/img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1200px) {
@@ -781,13 +795,17 @@ section,
 }
 
 .transparent-box {
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 200px 20px;
-  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Vertically center */
+  align-items: center; /* Horizontally center */
+  text-align: center; /* Center text inside */
+  padding: 20px;
+  padding-top: 200px;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust transparency */
+  width: 100%; /* Ensure the box uses the full width */
+  max-width: 800px; /* Optional: Limit the width if needed */
+  margin: 0 auto; /* Center the box horizontally */
 }
 
 .transparent-box h2, .transparent-box p {
@@ -795,12 +813,13 @@ section,
 }
 
 .profile-image {
-  max-width: 200px;
-  max-height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
+  width: 150px !important; /* Set fixed width */
+  height: 150px !important; /* Set fixed height */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Add space below the image */
 }
+
 
 /*--------------------------------------------------------------
 # About Section
