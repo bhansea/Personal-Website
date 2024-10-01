@@ -13,9 +13,9 @@ export default function Home() {
       </Head>
 
       {/* Hero Section */}
-      <section id="hero" className="hero">
+      <section id="hero" className="hero" data-aos="fade-in">
         <Image src="/assets/img/hero-bg.jpg" alt="Hero Background" layout="fill" objectFit="cover" />
-        <div className="container text-center">
+        <div className="container text-center" data-aos="zoom-out" data-aos-delay="100">
           <div className="transparent-box">
             <Image src="/assets/img/profile-img.jpg" alt="Brandon Luong" width={200} height={200} className="profile-image" />
             <h2>Brandon Luong</h2>

@@ -7,11 +7,15 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --nav-font: "Raleway",  sans-serif;
 }
 
 /* Global Colors */
@@ -139,12 +143,14 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 15px 0;
-  transition: all 0.5s;
-  z-index: 997;
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #e9ecef;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  font-family: 'Poppins', sans-serif;
 }
 
 .header .logo {
@@ -157,15 +163,28 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 32px;
+  font-size: 24px;
+  font-weight: 600;
   margin: 0;
-  font-weight: 300;
   text-transform: uppercase;
   color: var(--heading-color);
 }
 
+.sitename {
+  font-size: 32px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: var(--heading-color);
+  margin: 0;
+  width: 150px; /* Kepe as same size as .header-social-links for centering */
+}
+
 .header .header-social-links {
-  padding-right: 15px;
+  width: 150px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .header .header-social-links a {
@@ -204,15 +223,18 @@ h6 {
 /* Desktop Navigation */
 @media (min-width: 1200px) {
   .navmenu {
-    padding: 0;
+    display: flex;
+    align-items: center; /* Vertically centers the nav links */
+    justify-content: center; /* Horizontally centers the nav */
+    font-family: var(--nav-font);
   }
 
   .navmenu ul {
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    list-style: none;
-    align-items: center;
+    gap: 10px; 
   }
 
   .navmenu li {
@@ -231,16 +253,17 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    font-size: 15px;
+    font-size: 16px;
     padding: 0 2px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
+    letter-spacing: 0.1px;
   }
 
   .navmenu a i,
