@@ -55,9 +55,9 @@ export default function About() {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About - Personal Portfolio</title>
+        <title>About - Personal Stats</title>
         <meta name="description" content="Personal portfolio showcasing skills and experience" />
-        <meta name="keywords" content="portfolio, web developer, ui/ux" />
+        <meta name="keywords" content="portfolio, brandon, software engineer, stats" />
         <link href="/assets/img/favicon.png" rel="icon" />
         <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
       </Head>
@@ -67,7 +67,9 @@ export default function About() {
         <section id="about" className="about section">
           <div className="container section-title" data-aos="fade-up">
             <h2>About</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            <p>
+                <br />Driven by a passion for problem-solving and data insights, I bring both technical skills and a collaborative mindset to every project I contribute.
+            </p>
           </div>
 
           <div className="container" data-aos="fade-up" data-aos-delay="100">
@@ -76,33 +78,38 @@ export default function About() {
                 <Image src="/assets/img/profile-img.jpg" className="img-fluid" alt="Profile" width={300} height={400} />
               </div>
               <div className="col-lg-8 content">
-                <h2>UI/UX Designer &amp; Web Developer.</h2>
-                <p className="fst-italic py-3">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <h2>Software Developer &amp; Data Engineer.</h2>
+                <p className="fst-italic py-3" style={{ fontSize: '16px', marginTop: '0px !important' }}>
+                    Currently seeking a job involving software development, data engineering, or infrastructure.
                 </p>
                 <div className="row">
                   <div className="col-lg-6">
                     <ul>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Current Position:</strong> <span>UPS ESM Infrastructure Intern</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelor of Science</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>US Citizenship:</strong> <span>Citizen</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>Farmington, CT</span></li>
                     </ul>
                   </div>
                   <div className="col-lg-6">
                     <ul>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>email@example.com</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Graduation Date:</strong> <span>May 5, 2024</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Major:</strong> <span>Computer Science</span></li>
                       <li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>22</span></li>
                     </ul>
                   </div>
                 </div>
-                <p className="py-3">
-                  Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis. Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.
-                </p>
+                
               </div>
             </div>
+
+            <p className="py-3">
+                With hands-on experience in developing efficient systems and handling large-scale data, I am committed to using technology to solve real-world challenges.
+                <br />I am extremely passionate about working with data, as well as data visualization to gather insights and solve problems. This can be seen in many of the projects I have participated in these past few years; some of which include development of tools to automate UPS data reporting, a Python-based package optimizer that won a third-place Hackathon category from Google, and a sustainability project involving data insights and climate communication.
+                <br />My experience includes managing 250,000+ company devices and servers at UPS, streamlining repetitive processes using PowerShell and SQL, and winning third place at a Hackathon for developing a Python-based package optimizer using Google Cloud. I thrive in environments where innovation, efficiency, and teamwork drive success.
+            </p>
+
           </div>
         </section>
 
