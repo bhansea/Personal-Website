@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
             {/* Centered Navigation */}
             <nav id="navmenu" className="navmenu d-flex justify-content-center align-items-center">
               <ul className="d-flex align-items-center justify-content-center">
-                <li><Link href="/" className="active">Home</Link></li>
+                <li><Link href="/">Home</Link></li>
                 <li><Link href="/about">About</Link></li>
                 <li><Link href="/resume">Resume</Link></li>
                 <li><Link href="/photos">Photos</Link></li>
@@ -75,13 +75,13 @@ export default function RootLayout({ children }) {
               </a>
             </div>
             <div className="credits">
-              Designed by{" "}
+              See here for{" "}
               <a
                 href="https://bootstrapmade.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                BootstrapMade
+                references
               </a>
             </div>
           </div>

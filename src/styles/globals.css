@@ -147,7 +147,7 @@ h6 {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: #e9ecef;
+  background-color: #e9e8e6;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.1);
   z-index: 999;
   font-family: 'Poppins', sans-serif;
@@ -925,6 +925,29 @@ section,
   margin: 0;
   font-family: var(--heading-font);
   font-weight: 500;
+}
+
+.facts {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.count-box {
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.count-box .counter {
+  display: block;
+  font-size: 48px;
+  color: #000;
+}
+
+.count-box p {
+  margin: 0;
+  font-size: 14px;
+  color: #6c757d;
 }
 
 /*--------------------------------------------------------------
