@@ -89,7 +89,7 @@ const styles = {
     padding: '12px 40px',
     marginBottom: '30px',
     marginTop: '25px',
-    backgroundColor: '#34b7a7',
+    backgroundColor: '#3c94af',
     color: 'white',
     border: 'none',
     borderRadius: '50px',

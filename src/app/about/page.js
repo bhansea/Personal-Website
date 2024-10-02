@@ -76,7 +76,7 @@ export default function About() {
                     <div className="container section-title" data-aos="fade-up" style={{paddingBottom: '10px' }}>
                         <h2>About</h2>
                         <p>
-                            Driven by a passion for problem-solving and data insights, I bring both technical skills and a collaborative mindset to every project I contribute.
+                        Driven by a passion for problem-solving and data insights, I combine technical expertise with a collaborative mindset to deliver solutions that enhance team efficiency and achieve business goals.
                         </p>
                     </div>
 
@@ -91,7 +91,7 @@ export default function About() {
                             <div className="col-lg-8 content">
                                 <h2>Software Developer &amp; Data Engineer.</h2>
                                 <p className="fst-italic py-3" style={{ fontSize: '17px', marginTop: '0px !important' }}>
-                                    Currently seeking a job involving software development, data engineering, or infrastructure.
+                                    Skilled in data engineering, automation, and software development with a strong focus on PowerShell, SQL, and Python. Currently seeking a job involving software development, data engineering, or infrastructure.
                                 </p>
                                 <div className="row">
                                     <div className="col-lg-6">
@@ -117,9 +117,9 @@ export default function About() {
                         <div className="horizontal-line" style={{marginTop: '35px' }}></div>
 
                         <p className="py-3">
-                            With hands-on experience in developing efficient systems and handling large-scale data, I am committed to using technology to solve real-world challenges.
-                            <br />I am extremely passionate about working with data, as well as data visualization to gather insights and solve problems. This can be seen in many of the projects I have participated in these past few years; some of which include development of tools to automate UPS data reporting, a Python-based package optimizer that won a third-place Hackathon category from Google, and a sustainability project involving data insights and climate communication.
-                            <br />My experience includes managing 250,000+ company devices and servers at UPS, streamlining repetitive processes using PowerShell and SQL, and winning third place at a Hackathon for developing a Python-based package optimizer using Google Cloud. I thrive in environments where innovation, efficiency, and teamwork drive success.
+                            I am extremely passionate about working with data, as well as data visualization to gather insights and solve problems. This can be seen in many of the projects I have participated in these past few years; some of which include development of tools to automate UPS data reporting, a Python-based package optimizer that won a third-place Hackathon category from Google, and a sustainability project involving data insights and climate communication.
+                            <br /><br />My experience also includes managing 250,000+ company devices and servers at UPS, utilizing Agile methodologies to develop a service application for Brigham & Women's Hospital as a back-end software engineer, and creating an interactive app prototype as part of a project proposal in Hong Kong.
+                            <br /><br />With hands-on experience in developing efficient systems and handling large-scale data, I am committed to using my skills in technology to solve real-world challenges.
                         </p>
                     </div>
                 </section>
