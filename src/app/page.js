@@ -34,7 +34,7 @@ export default function Home() {
           <p style={styles.subTitle} data-aos="fade-up" data-aos-delay="200">
             Aspiring software engineer from Farmington, Connecticut
           </p>
-          <button style={styles.button} data-aos="zoom-in" data-aos-delay="400">
+          <button style={styles.button} data-aos="zoom-in" data-aos-delay="400" onClick={() => window.location.href = '/about'}>
             ABOUT ME
           </button>
         </div>
