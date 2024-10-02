@@ -489,7 +489,7 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  padding: 40px 0;
+  padding: 20px 0;
   position: relative;
 }
 
@@ -498,7 +498,7 @@ h6 {
 }
 
 .footer .social-links {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .footer .social-links a {
