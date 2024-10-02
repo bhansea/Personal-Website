@@ -76,7 +76,7 @@ export default function About() {
                     <div className="container section-title" data-aos="fade-up" style={{paddingBottom: '10px' }}>
                         <h2>About</h2>
                         <p>
-                        Driven by a passion for problem-solving and data insights, I combine technical expertise with a collaborative mindset to deliver solutions that enhance team efficiency and achieve business goals.
+                            Driven by a passion for problem-solving and data insights, I combine technical expertise with a collaborative mindset to deliver solutions that enhance team efficiency and achieve business goals.
                         </p>
                     </div>
 
@@ -86,7 +86,7 @@ export default function About() {
 
                         <div className="row gy-4 justify-content-center">
                             <div className="col-lg-4">
-                                <Image src="/assets/img/profile-img.jpg" className="img-fluid" alt="Profile" width={300} height={400} />
+                                <Image src="/assets/img/grad-pic.jpg" className="img-fluid" alt="Profile" width={400} height={540} />
                             </div>
                             <div className="col-lg-8 content">
                                 <h2>Software Developer &amp; Data Engineer.</h2>
@@ -110,19 +110,31 @@ export default function About() {
                                             <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>22</span></li>
                                         </ul>
                                     </div>
+                                    <p className="py-3">
+                                        I am extremely passionate about working with data, as well as data visualization to gather insights and solve problems. This can be seen in many of the projects I have participated in these past few years; some of which include development of tools to automate UPS data reporting, a Python-based package optimizer that won a third-place Hackathon category from Google, and a sustainability project involving data insights and climate communication.
+                                        <br /><br />My experience also includes managing 250,000+ company devices and servers at UPS, utilizing Agile methodologies to develop a service application for Brigham & Women's Hospital as a back-end software engineer, and creating an interactive app prototype as part of a project proposal in Hong Kong.
+                                        <br /><br />With hands-on experience in developing efficient systems and handling large-scale data, I am committed to using my skills in technology to solve real-world challenges.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="horizontal-line" style={{marginTop: '35px' }}></div>
-
-                        <p className="py-3">
-                            I am extremely passionate about working with data, as well as data visualization to gather insights and solve problems. This can be seen in many of the projects I have participated in these past few years; some of which include development of tools to automate UPS data reporting, a Python-based package optimizer that won a third-place Hackathon category from Google, and a sustainability project involving data insights and climate communication.
-                            <br /><br />My experience also includes managing 250,000+ company devices and servers at UPS, utilizing Agile methodologies to develop a service application for Brigham & Women's Hospital as a back-end software engineer, and creating an interactive app prototype as part of a project proposal in Hong Kong.
-                            <br /><br />With hands-on experience in developing efficient systems and handling large-scale data, I am committed to using my skills in technology to solve real-world challenges.
-                        </p>
                     </div>
                 </section>
+
+                {/* Education Section */}
+                <section id="education" className="skills section">
+                    <div className="container section-title" data-aos="fade-up">
+                        <h2>Education</h2>
+                        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                    </div>
+
+                    <div className="container" data-aos="fade-up" data-aos-delay="100">
+                        
+                    </div>
+                </section>
+
 
                 {/* Skills Section */}
                 <section id="skills" className="skills section">

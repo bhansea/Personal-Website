@@ -824,6 +824,10 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.col-lg-4 {
+  position: relative; /* Required for layout="fill" to work */
+}
+
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
@@ -849,10 +853,6 @@ section,
   margin-right: 5px;
   color: var(--accent-color);
   line-height: 0;
-}
-
-.col-lg-4 {
-  padding-left: 100px; /* Adjust this value as needed */
 }
 
 .horizontal-line {
