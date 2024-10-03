@@ -2,7 +2,7 @@
 
 import Head from 'next/head';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
@@ -58,6 +58,25 @@ export default function About() {
 
     }, []);
 
+    const [displayText, setDisplayText] = useState(''); // Empty at first
+    const fullText = 'Software Developer & Data Engineer. '; // Full text you want to type
+
+    useEffect(() => {
+        let index = 0;
+        const typingInterval = setInterval(() => {
+            if (index <= fullText.length) {
+                setDisplayText(fullText.slice(0, index)); // Slices up to current index
+                index++;
+            } else {
+                clearInterval(typingInterval); // Stop when done typing
+            }
+        }, 100); // Adjust typing speed (100ms per character)
+    
+        return () => clearInterval(typingInterval); // Cleanup interval on unmount
+    }, []);
+    
+    
+
     return (
         <>
             <Head>
@@ -89,7 +108,8 @@ export default function About() {
                                 <Image src="/assets/img/grad-pic.jpg" className="img-fluid" alt="Profile" width={440} height={540} />
                             </div>
                             <div className="col-lg-8 content">
-                                <h2 style={{ marginTop: '10px' }}>Software Developer &amp; Data Engineer.</h2>
+                                {/* Typing animation applied here */}
+                                <h2 style={{ marginTop: '10px' }} className="typing-effect">{displayText}</h2>
                                 <p className="fst-italic py-3" style={{ fontSize: '17px', marginTop: '0px !important' }}>
                                     Skilled in software development, data engineering, and automation with a strong focus on Java, PowerShell, SQL, and Python. Currently seeking a job involving software development, data engineering, or infrastructure.
                                 </p>
@@ -111,7 +131,7 @@ export default function About() {
                                         </ul>
                                     </div>
                                     <p className="py-3">
-                                        I am extremely passionate about working with data, as well as data visualization to gather insights and solve problems. This can be seen in many of the projects I have participated in these past few years; some of which include development of tools to automate UPS data reporting, a Python-based package optimizer that won a third-place Hackathon category from Google, and a sustainability project involving data insights and climate communication.
+                                        I am extremely passionate about working with data, as well as data visualization to gather insights and solve problems. This can be seen in many of the projects I have participated in these past few years; some of which include development of tools to automate UPS data reporting, a Python-based package optimizer that won a third-place Hackathon category from Google, and a capstone project focused on sustainability, leveraging data insights for effective climate communication.
                                         <br /><br />My experience also includes managing 250,000+ company devices and servers at UPS, utilizing Agile methodologies to develop a service application for Brigham & Women's Hospital as a back-end software engineer, and creating an interactive app prototype as part of a project proposal in Hong Kong.
                                         <br /><br />With hands-on experience in developing efficient systems and handling large-scale data, I am committed to using my skills in technology to solve real-world challenges. As an engineer, my goal is to deepen my expertise in data analysis and representation, as I firmly believe that data is the key to everything—from software development to business planning.
                                     </p>
@@ -124,7 +144,7 @@ export default function About() {
                 </section>
 
                 {/* Education Section */}
-                <section id="about" className="skills section">
+                <section id="about" className="skills section" style={{ paddingBottom: '0px' }}>
                     <div className="container section-title" data-aos="fade-up" style={{ paddingBottom: '30px' }}>
                         <h2>Education</h2>
                     </div>
@@ -226,7 +246,7 @@ export default function About() {
                 </section>
 
                 {/* Facts Section */}
-                <section id="about" className="facts" style={{paddingBottom: '100px'}}>
+                <section id="about" className="facts" style={{paddingBottom: '125px'}}>
                     <div className="container" data-aos="fade-up">
                         <div className="section-title">
                             <h2>Facts</h2>
@@ -236,23 +256,23 @@ export default function About() {
                         <div className="row no-gutters">
                             <div className="col-lg-3 col-md-6 mt-5 mt-md-0" data-aos="fade-up">
                                 <div className="fact-item">
-                                    <span className="counter" data-target="232">0</span>
+                                    <span className="counter" data-target="11">0</span>
                                     <div className="fact-line"></div>
-                                    <p>Clients</p>
+                                    <p>Team Members</p>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 mt-5 mt-md-0" data-aos="fade-up" data-aos-delay="200">
                                 <div className="fact-item">
-                                    <span className="counter" data-target="521">0</span>
+                                    <span className="counter" data-target="1036">0</span>
                                     <div className="fact-line"></div>
-                                    <p>Projects</p>
+                                    <p>Lines of Code Written</p>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
                                 <div className="fact-item">
-                                    <span className="counter" data-target="1453">0</span>
+                                    <span className="counter" data-target="97317">0</span>
                                     <div className="fact-line"></div>
-                                    <p>Hours Of Support</p>
+                                    <p>Estimated Cost($)</p>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
