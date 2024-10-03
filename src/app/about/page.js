@@ -16,6 +16,12 @@ export default function About() {
             mirror: true, // Let the animation happen when scrolling back up
         });
 
+        const progressBars = document.querySelectorAll('.progress-bar');
+    progressBars.forEach((bar) => {
+        const percentage = bar.getAttribute('data-percentage');
+        bar.style.width = `${percentage}%`;
+    });
+
         // Number animation when the section comes into view
         const animateNumbers = (entries, observer) => {
             entries.forEach(entry => {
@@ -74,6 +80,8 @@ export default function About() {
     
         return () => clearInterval(typingInterval); // Cleanup interval on unmount
     }, []);
+
+    
     
     
 
@@ -149,15 +157,15 @@ export default function About() {
                         <h2>Education</h2>
                     </div>
 
-                    <div className="container" data-aos="fade-up" data-aos-delay="100" style={{ marginBottom: '30px' }}>
+                    <div className="container" data-aos="fade-up" data-aos-delay="100" style={{ marginBottom: '5px' }}>
                         <div className="row justify-content-center">
                             <div className="col-lg-8 d-flex align-items-center mx-auto justify-content-between">
                             <img src="/assets/img/wpi-logo.png" alt="Icon" className="me-3" width="120" height="120" />
                             <div className="w-100" style={{ margin: '5px' }}>
                                 <p style={{ display: 'flex', alignItems: 'center', marginTop: '8px' }}>
-                                Worcester Polytechnic Institute | Worcester, MA
+                                    <strong>Worcester Polytechnic Institute&nbsp;</strong> | Worcester, MA
                                 <span className="flex-grow-1 border-bottom mx-3"></span>
-                                <span>Sep. 2020 - May 2024</span>
+                                <span>Aug. 2020 - May 2024</span>
                                 </p>
                                 <p>Bachelor’s Degree in Computer Science</p>
                                 <p>GPA: 3.61</p>
@@ -172,9 +180,9 @@ export default function About() {
                             <img src="/assets/img/fps-logo.png" alt="Farmington logo" className="me-3" width="120" height="120" />
                             <div className="w-100" style={{ margin: '5px' }}>
                                 <p style={{ display: 'flex', alignItems: 'center', marginTop: '8px' }}>
-                                Farmington High School | Farmington, CT
+                                <strong>Farmington High School&nbsp;</strong> | Farmington, CT
                                 <span className="flex-grow-1 border-bottom mx-3"></span>
-                                <span>Aug. 2016 - Jun. 2020</span>
+                                <span>Sep. 2016 - Jun. 2020</span>
                                 </p>
                                 <p>Bachelor’s Degree in Computer Science</p>
                                 <p>GPA: 4.0</p>
@@ -198,46 +206,46 @@ export default function About() {
                         <div className="row skills-content skills-animation">
                             <div className="col-lg-6">
                                 <div className="progress">
-                                    <span className="skill"><span>HTML</span> <i className="val">100%</i></span>
+                                    <span className="skill"><span>Java</span> <i className="val">100%</i></span>
                                     <div className="progress-bar-wrap">
-                                        <div className="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div className="progress-bar" role="progressbar" data-percentage="100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
 
                                 <div className="progress">
-                                    <span className="skill"><span>CSS</span> <i className="val">90%</i></span>
+                                    <span className="skill"><span>SQL</span> <i className="val">90%</i></span>
                                     <div className="progress-bar-wrap">
-                                        <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div className="progress-bar" role="progressbar" data-percentage="90" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
 
                                 <div className="progress">
-                                    <span className="skill"><span>JavaScript</span> <i className="val">75%</i></span>
+                                    <span className="skill"><span>PowerShell</span> <i className="val">80%</i></span>
                                     <div className="progress-bar-wrap">
-                                        <div className="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div className="progress-bar" role="progressbar" data-percentage="80" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="col-lg-6">
                                 <div className="progress">
-                                    <span className="skill"><span>PHP</span> <i className="val">80%</i></span>
+                                    <span className="skill"><span>Python</span> <i className="val">90%</i></span>
                                     <div className="progress-bar-wrap">
-                                        <div className="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div className="progress-bar" role="progressbar" data-percentage="90" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
 
                                 <div className="progress">
-                                    <span className="skill"><span>WordPress/CMS</span> <i className="val">90%</i></span>
+                                    <span className="skill"><span>HTML/CSS</span> <i className="val">75%</i></span>
                                     <div className="progress-bar-wrap">
-                                        <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div className="progress-bar" role="progressbar" data-percentage="75" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
 
                                 <div className="progress">
-                                    <span className="skill"><span>Photoshop</span> <i className="val">55%</i></span>
+                                    <span className="skill"><span>JavaScript</span> <i className="val">60%</i></span>
                                     <div className="progress-bar-wrap">
-                                        <div className="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div className="progress-bar" role="progressbar" data-percentage="60" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
                             </div>
@@ -245,11 +253,11 @@ export default function About() {
                     </div>
                 </section>
 
-                {/* Facts Section */}
+                {/* Highlights Section */}
                 <section id="about" className="facts" style={{paddingBottom: '125px'}}>
                     <div className="container" data-aos="fade-up">
                         <div className="section-title">
-                            <h2>Facts</h2>
+                            <h2>Project Highlights</h2>
                             <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
                         </div>
 
@@ -277,9 +285,9 @@ export default function About() {
                             </div>
                             <div className="col-lg-3 col-md-6 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
                                 <div className="fact-item">
-                                    <span className="counter" data-target="32">0</span>
+                                    <span className="counter" data-target="91">0</span>
                                     <div className="fact-line"></div>
-                                    <p>Workers</p>
+                                    <p>Tests Written</p>
                                 </div>
                             </div>
                         </div>
