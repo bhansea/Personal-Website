@@ -104,7 +104,7 @@ export default function About() {
                                     </div>
                                     <div className="col-lg-6">
                                         <ul>
-                                            <li><i className="bi bi-chevron-right"></i> <strong>Graduation Date:</strong> <span>May 5, 2024</span></li>
+                                            <li><i className="bi bi-chevron-right"></i> <strong>Graduation Date:</strong> <span>May 2024</span></li>
                                             <li><i className="bi bi-chevron-right"></i> <strong>Major:</strong> <span>Computer Science</span></li>
                                             <li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                                             <li><i className="bi bi-chevron-right"></i> <strong>Age:</strong> <span>22</span></li>
@@ -125,15 +125,46 @@ export default function About() {
 
                 {/* Education Section */}
                 <section id="about" className="skills section">
-                    <div className="container section-title" data-aos="fade-up">
+                    <div className="container section-title" data-aos="fade-up" style={{ paddingBottom: '30px' }}>
                         <h2>Education</h2>
-                        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
                     </div>
 
-                    <div className="container" data-aos="fade-up" data-aos-delay="100">
-                        
+                    <div className="container" data-aos="fade-up" data-aos-delay="100" style={{ marginBottom: '30px' }}>
+                        <div className="row justify-content-center">
+                            <div className="col-lg-8 d-flex align-items-center mx-auto justify-content-between">
+                            <img src="/assets/img/wpi-logo.png" alt="Icon" className="me-3" width="120" height="120" />
+                            <div className="w-100" style={{ margin: '5px' }}>
+                                <p style={{ display: 'flex', alignItems: 'center', marginTop: '8px' }}>
+                                Worcester Polytechnic Institute | Worcester, MA
+                                <span className="flex-grow-1 border-bottom mx-3"></span>
+                                <span>Sep. 2020 - May 2024</span>
+                                </p>
+                                <p>Bachelor’s Degree in Computer Science</p>
+                                <p>GPA: 3.61</p>
+                            </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div className="container" data-aos="fade-up" data-aos-delay="100" style={{ marginBottom: '30px' }}>
+                        <div className="row justify-content-center">
+                            <div className="col-lg-8 d-flex align-items-center mx-auto justify-content-between">
+                            <img src="/assets/img/fps-logo.png" alt="Farmington logo" className="me-3" width="120" height="120" />
+                            <div className="w-100" style={{ margin: '5px' }}>
+                                <p style={{ display: 'flex', alignItems: 'center', marginTop: '8px' }}>
+                                Farmington High School | Farmington, CT
+                                <span className="flex-grow-1 border-bottom mx-3"></span>
+                                <span>Aug. 2016 - Jun. 2020</span>
+                                </p>
+                                <p>Bachelor’s Degree in Computer Science</p>
+                                <p>GPA: 4.0</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </section>
+
 
 
                 {/* Skills Section */}
