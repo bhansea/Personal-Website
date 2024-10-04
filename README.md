@@ -8,6 +8,7 @@ npm install aos swiper
 npm install bootstrap
 npm install bootstrap-icons
 npm install react-slick slick-carousel
+npm install yet-another-react-lightbox
 
 ## Getting Started
 

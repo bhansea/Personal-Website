@@ -1053,6 +1053,16 @@ section,
     margin-top: 0;
 }
 
+.yarl__slide {
+  max-width: 80vw;  /* Limit the width to 80% of the viewport */
+  max-height: 80vh; /* Limit the height to 80% of the viewport */
+  margin: auto;     /* Center the image */
+}
+
+.yarl__container {
+  background-color: rgba(0, 0, 0, 0.7) !important; /* Darken the background when lightbox is active */
+}
+
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/

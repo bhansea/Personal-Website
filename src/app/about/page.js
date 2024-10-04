@@ -15,6 +15,9 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 
+import 'yet-another-react-lightbox/styles.css';
+import Lightbox from 'yet-another-react-lightbox';
+
 
 // Dynamically import Swiper to prevent SSR issues
 const Navigation = dynamic(() => import('swiper').then(mod => mod.Navigation), { ssr: false });
@@ -132,6 +135,24 @@ export default function About() {
         };
 
     }, []);
+
+    const [isOpen, setIsOpen] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const images = [
+        '/assets/img/service-app/image001.png',
+        '/assets/img/service-app/image018.png',
+        '/assets/img/service-app/image104.png',
+        '/assets/img/service-app/image066.png',
+        '/assets/img/service-app/image126.png',
+        '/assets/img/service-app/image123.png',
+        '/assets/img/service-app/image142.png',
+    ];
+
+    const openLightbox = (index) => {
+        setCurrentImageIndex(index);
+        setIsOpen(true);
+    };
     
     return (
         <>
@@ -367,31 +388,23 @@ export default function About() {
                                     modules={[EffectCoverflow, Pagination]}
                                     className="mySwiper"
                                 >
-                                    <SwiperSlide>
-                                        <img src="/assets/img/service-app/image001.png" alt="Slide 1" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="/assets/img/service-app/image018.png" alt="Slide 2" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="/assets/img/service-app/image104.png" alt="Slide 3" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="/assets/img/service-app/image104.png" alt="Slide 4" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="/assets/img/service-app/image066.png" alt="Slide 5" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="/assets/img/service-app/image126.png" alt="Slide 6" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="/assets/img/service-app/image123.png" alt="Slide 7" />
-                                    </SwiperSlide>
-                                    <SwiperSlide>
-                                        <img src="/assets/img/service-app/image142.png" alt="Slide 8" />
-                                    </SwiperSlide>
+                                    {images.map((src, index) => (
+                                        <SwiperSlide key={index} onClick={() => openLightbox(index)}>
+                                            <img src={src} alt={`Slide ${index + 1}`} style={{ cursor: 'pointer' }} />
+                                        </SwiperSlide>
+                                    ))}
                                 </Swiper>
+
+                                {isOpen && (
+                                    <Lightbox
+                                        open={isOpen}
+                                        close={() => setIsOpen(false)}
+                                        slides={images.map((src) => ({ src }))}
+                                        index={currentImageIndex}
+                                        onClose={() => setIsOpen(false)}
+                                        onIndexChange={setCurrentImageIndex}
+                                    />
+                                )}
                         </div>
                     </div>
                 </section>
