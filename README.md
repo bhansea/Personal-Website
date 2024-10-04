@@ -7,6 +7,7 @@ Modules installed:
 npm install aos swiper
 npm install bootstrap
 npm install bootstrap-icons
+npm install react-slick slick-carousel
 
 ## Getting Started
 

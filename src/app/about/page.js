@@ -2,11 +2,26 @@
 
 import Head from 'next/head';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 
+import dynamic from 'next/dynamic';
+import 'swiper/swiper-bundle.css';
+import { EffectCoverflow } from 'swiper/modules';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+
+
+// Dynamically import Swiper to prevent SSR issues
+const Navigation = dynamic(() => import('swiper').then(mod => mod.Navigation), { ssr: false });
+
 export default function About() {
+    const [isClient, setIsClient] = useState(false);
+
     useEffect(() => {
         // Initialize AOS for scroll animations
         AOS.init({
@@ -17,10 +32,12 @@ export default function About() {
         });
 
         const progressBars = document.querySelectorAll('.progress-bar');
-    progressBars.forEach((bar) => {
+        progressBars.forEach((bar) => {
         const percentage = bar.getAttribute('data-percentage');
         bar.style.width = `${percentage}%`;
-    });
+        });
+
+    
 
         // Number animation when the section comes into view
         const animateNumbers = (entries, observer) => {
@@ -81,10 +98,41 @@ export default function About() {
         return () => clearInterval(typingInterval); // Cleanup interval on unmount
     }, []);
 
+    useEffect(() => {
+        // Initialize AOS for scroll animations
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false, // Allow it to happen multiple times
+            mirror: true, // Let the animation happen when scrolling back up
+        });
     
+        // Intersection observer for progress bars
+        const progressBars = document.querySelectorAll('.progress-bar');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const bar = entry.target;
+                const percentage = bar.getAttribute('data-percentage');
+                if (entry.isIntersecting) {
+                    // Set the width to trigger the animation
+                    bar.style.width = `${percentage}%`;
+                } else {
+                    // Reset the width to 0 when it's out of view
+                    bar.style.width = '0';
+                }
+            });
+        }, { threshold: 0.6 });  // Adjust threshold if necessary
     
+        // Observe each progress bar
+        progressBars.forEach(bar => observer.observe(bar));
     
+        return () => {
+            // Cleanup observers when component unmounts
+            progressBars.forEach(bar => observer.unobserve(bar));
+        };
 
+    }, []);
+    
     return (
         <>
             <Head>
@@ -253,13 +301,19 @@ export default function About() {
                     </div>
                 </section>
 
-                {/* Highlights Section */}
+                {/* Project Highlights Section */}
                 <section id="about" className="facts" style={{paddingBottom: '125px'}}>
                     <div className="container" data-aos="fade-up">
                         <div className="section-title">
                             <h2>Project Highlights</h2>
-                            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
                         </div>
+
+
+                        <div className="section-title">
+                            <h3>Brigham & Women's Hospital Service Application</h3>
+                            <p>Servit langten tls panghel</p>
+                        </div>
+
 
                         <div className="row no-gutters">
                             <div className="col-lg-3 col-md-6 mt-5 mt-md-0" data-aos="fade-up">
@@ -290,6 +344,54 @@ export default function About() {
                                     <p>Tests Written</p>
                                 </div>
                             </div>
+                        </div>
+
+                        {/* B&WH Project Image Slider */}
+                        <div className="container" data-aos="fade-up" style={{ marginTop: '60px' }}>
+                                <Swiper
+                                    effect={'coverflow'}
+                                    grabCursor={true}
+                                    centeredSlides={true}
+                                    slidesPerView={'auto'}
+                                    loop={true}
+                                    coverflowEffect={{
+                                        rotate: 50,
+                                        stretch: 0,
+                                        depth: 100,
+                                        modifier: 1,
+                                        slideShadows: true,
+                                    }}
+                                    pagination={{
+                                        clickable: true,
+                                    }}
+                                    modules={[EffectCoverflow, Pagination]}
+                                    className="mySwiper"
+                                >
+                                    <SwiperSlide>
+                                        <img src="/assets/img/service-app/image001.png" alt="Slide 1" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img src="/assets/img/service-app/image018.png" alt="Slide 2" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img src="/assets/img/service-app/image104.png" alt="Slide 3" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img src="/assets/img/service-app/image104.png" alt="Slide 4" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img src="/assets/img/service-app/image066.png" alt="Slide 5" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img src="/assets/img/service-app/image126.png" alt="Slide 6" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img src="/assets/img/service-app/image123.png" alt="Slide 7" />
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <img src="/assets/img/service-app/image142.png" alt="Slide 8" />
+                                    </SwiperSlide>
+                                </Swiper>
                         </div>
                     </div>
                 </section>
