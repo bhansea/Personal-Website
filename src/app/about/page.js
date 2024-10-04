@@ -237,7 +237,7 @@ export default function About() {
                                 <span>Aug. 2020 - May 2024</span>
                                 </p>
                                 <p>Bachelor’s Degree in Computer Science</p>
-                                <p>GPA: 3.61</p>
+                                <p>GPA: 3.61, High Distinction</p>
                             </div>
                             </div>
                         </div>
@@ -254,7 +254,7 @@ export default function About() {
                                 <span>Sep. 2016 - Jun. 2020</span>
                                 </p>
                                 <p>Bachelor’s Degree in Computer Science</p>
-                                <p>GPA: 4.0</p>
+                                <p>GPA: 4.0, First Honors</p>
                             </div>
                             </div>
                         </div>
@@ -268,7 +268,7 @@ export default function About() {
                 <section id="about" className="skills section">
                     <div className="container section-title" data-aos="fade-up">
                         <h2>Skills</h2>
-                        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                        <p>This is a personal assessment of my proficiency in each skill, with 100% being my strongest skill.</p>
                     </div>
 
                     <div className="container" data-aos="fade-up" data-aos-delay="100">
@@ -332,14 +332,20 @@ export default function About() {
 
                         <div className="section-title">
                             <h3>Brigham & Women's Hospital Service Application</h3>
-                            <p>Servit langten tls panghel</p>
+                            <p style={{ textAlign: "left" }}>
+                                This service application was developed through a collaboration between Brigham & Women's Hospital and Worcester Polytechnic Institute (WPI) to help improve hospital staff workflows. The application includes a pathfinding feature for efficient navigation around the hospital, integrated service request modules to streamline staff requests, and additional features like synchronized map editing to allow for future scalability.
+                                <br /><br />
+                                As part of a team of 10 students, I contributed to the backend development using Java, JavaFX, and PostgreSQL, applying Agile methodologies and design patterns such as Data Access Objects (DAO). Over the course of two months, our team developed a functional, high-quality solution, presented to hospital representatives in May 2023.
+                                <br /><br />
+                                Below are a few notable metrics from this project. These statistics were gathered using OpenHub, and the cost estimate was calculated based on the 'Basic COCOMO Model'.
+                            </p>
                         </div>
 
 
                         <div className="row no-gutters">
                             <div className="col-lg-3 col-md-6 mt-5 mt-md-0" data-aos="fade-up">
                                 <div className="fact-item">
-                                    <span className="counter" data-target="11">0</span>
+                                    <span className="counter" data-target="10">0</span>
                                     <div className="fact-line"></div>
                                     <p>Team Members</p>
                                 </div>
@@ -348,7 +354,16 @@ export default function About() {
                                 <div className="fact-item">
                                     <span className="counter" data-target="1036">0</span>
                                     <div className="fact-line"></div>
-                                    <p>Lines of Code Written</p>
+                                    <p style={{marginBottom: "0px"}}>Lines of Code Written</p>
+                                    <small style={{color: "#666", fontSize: "14px"}}>(Personal contribution)</small>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-md-6 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+                                <div className="fact-item">
+                                    <span className="counter" data-target="91">0</span>
+                                    <div className="fact-line"></div>
+                                    <p style={{marginBottom: "0px"}}>Tests Written</p>
+                                    <small style={{color: "#666", fontSize: "14px"}}>(Personal contribution)</small>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
@@ -356,13 +371,6 @@ export default function About() {
                                     <span className="counter" data-target="97317">0</span>
                                     <div className="fact-line"></div>
                                     <p>Estimated Cost($)</p>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-md-6 mt-5 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
-                                <div className="fact-item">
-                                    <span className="counter" data-target="91">0</span>
-                                    <div className="fact-line"></div>
-                                    <p>Tests Written</p>
                                 </div>
                             </div>
                         </div>
