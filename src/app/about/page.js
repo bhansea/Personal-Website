@@ -337,7 +337,7 @@ export default function About() {
                                 <br /><br />
                                 As part of a team of 10 students, I contributed to the backend development using Java, JavaFX, and PostgreSQL, applying Agile methodologies and design patterns such as Data Access Objects (DAO). Over the course of two months, our team developed a functional, high-quality solution, presented to hospital representatives in May 2023.
                                 <br /><br />
-                                Below are a few notable metrics from this project. These statistics were gathered using OpenHub, and the cost estimate was calculated based on the 'Basic COCOMO Model'.
+                                Below are a few notable metrics from this project. These statistics were gathered using OpenHub, and the cost estimate was calculated based on the <a href="https://en.wikipedia.org/wiki/COCOMO" target="_blank">Basic COCOMO Model</a>.
                             </p>
                         </div>
 

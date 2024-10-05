@@ -119,6 +119,7 @@ const styles = {
     backgroundColor: 'rgba(0, 0, 0, 0.44)',
     padding: '50px',
     width: '70%',
+    height: '65%',
   },
   content: {
     textAlign: 'center',
