@@ -422,7 +422,7 @@ export default function About() {
                             <div className="container" data-aos="fade-up" style={{ marginTop: '60px' }}>
                                 <h3 style={{ marginTop: "60px" }}>Smart Cultural Precinct Mobile App Proposal</h3>
                                 <p style={{ textAlign: "left" }}>
-                                The Smart Cultural Precinct (SCP) initiative, developed by the Institute for Sustainable Urbanisation (ISU), aims to preserve the cultural heritage and sense of community in Hong Kong’s Central District amidst rapid urban development. Our team of 4 students traveled to Hong Kong in 2023 to collaborate on designing a mobile application to serve the goals of the SCP, focusing on creating a digital platform to promote and support the SCP region. The app aims to connect various stakeholders, including local businesses, residents, and tourists, while enhancing community engagement and cultural preservation.
+                                The Smart Cultural Precinct (SCP) initiative, developed by the Institute for Sustainable Urbanisation (ISU), aims to preserve the cultural heritage and sense of community in Hong Kong’s Central District amidst rapid urban development. Our team of 4 students traveled to Hong Kong in 2023 to collaborate on designing a mobile application as part of this project. The app was envisioned as a digital platform to promote and support the SCP region, connecting various stakeholders, including local businesses, residents, and tourists, while enhancing community engagement and cultural preservation.
                                 <br />
                                 </p>
                                 
@@ -431,7 +431,7 @@ export default function About() {
                                 
                                 <p style={{ textAlign: "left" }} data-aos="fade-up">
                                 <br />
-                                As shown in the methodology flowchart above, our project objectives included identifying heritage sites, gathering community input, establishing the app’s identity, and evaluating its feasibility. We developed an interactive prototype that was refined through consultations with software developers, community members, and stakeholders. Over the course of this four-month effort, our team made several recommendations for future development and long-term maintenance of the SCP app, which can be found in more depth in the <a href="https://digital.wpi.edu/concern/student_works/70795c08j?locale=en" target="_blank">WPI digital library</a> of student works.
+                                As shown in the methodology flowchart above, our project objectives included (1) identifying heritage sites, (2) gathering community input, (3) establishing the app’s identity, and (4) evaluating its feasibility. We developed an interactive prototype that was refined through consultations with software developers, community members, and stakeholders. Over the course of this four-month effort, we gathered valuable feedback that informed several final recommendations for future development. These recommendations, along with more detailed findings, can be explored in the <a href="https://digital.wpi.edu/concern/student_works/70795c08j?locale=en" target="_blank">WPI digital library</a>.
                                 </p>
 
                                 <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: "30px" }}>
