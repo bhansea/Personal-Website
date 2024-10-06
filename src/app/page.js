@@ -86,7 +86,7 @@ export default function Home() {
             {!typingCompleted && subtitleIndex > 0 && subtitleIndex <= subtitleText.length && (
               <span style={{ visibility: showCursor}}>|</span>
             )}
-            {typingCompleted && showCursor && <span style={{ visibility: showCursor ? 'visible' : 'hidden' }}>|</span>}
+            {typingCompleted && showCursor && <span style={{ visibility: showCursor ? 'visible' : 'hidden', position: "relative" }}>|</span>}
           </p>
 
 
@@ -146,6 +146,7 @@ const styles = {
     fontSize: '24px',
     margin: '10px 0',
     fontFamily: "'Roboto', sans-serif",
+    position: "static",
   },
   button: {
     padding: '12px 40px',

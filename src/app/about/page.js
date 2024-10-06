@@ -335,9 +335,9 @@ export default function About() {
                             <p style={{ textAlign: "left" }}>
                                 This service application was developed through a collaboration between Brigham & Women's Hospital and Worcester Polytechnic Institute (WPI) to help improve hospital staff workflows. The application includes a pathfinding feature for efficient navigation around the hospital, integrated service request modules to streamline staff requests, and additional features like synchronized map editing to allow for future scalability.
                                 <br /><br />
-                                As part of a team of 10 students, I contributed to the backend development using Java, JavaFX, and PostgreSQL, applying Agile methodologies and design patterns such as Data Access Objects (DAO). Over the course of two months, our team developed a functional, high-quality solution, presented to hospital representatives in May 2023.
+                                As part of a team of 10 students, I contributed to both the backend development and user interface using Java, JavaFX, and PostgreSQL, applying Agile methodologies and design patterns such as Data Access Objects (DAO). Over the course of two months, our team developed a functional, high-quality solution, presented to hospital representatives in May 2023.
                                 <br /><br />
-                                Below are a few notable metrics from this project. These statistics were gathered using OpenHub, and the cost estimate was calculated based on the <a href="https://en.wikipedia.org/wiki/COCOMO" target="_blank">Basic COCOMO Model</a>.
+                                Below are a few notable metrics from this project. Some statistics were gathered using OpenHub, and the cost estimate was calculated using the <a href="https://en.wikipedia.org/wiki/COCOMO" target="_blank">Basic COCOMO Model</a>.
                             </p>
                         </div>
 
@@ -352,7 +352,7 @@ export default function About() {
                             </div>
                             <div className="col-lg-3 col-md-6 mt-5 mt-md-0" data-aos="fade-up" data-aos-delay="200">
                                 <div className="fact-item">
-                                    <span className="counter" data-target="1036">0</span>
+                                    <span className="counter" data-target="3077">0</span>
                                     <div className="fact-line"></div>
                                     <p style={{marginBottom: "0px"}}>Lines of Code Written</p>
                                     <small style={{color: "#666", fontSize: "14px"}}>(Personal contribution)</small>
@@ -414,6 +414,42 @@ export default function About() {
                                     />
                                 )}
                         </div>
+
+                        <div className="horizontal-line" style={{marginTop: '35px' }}></div>
+
+                        {/* SCP App Feasibility */}
+                        <div className="section-title">
+                            <div className="container" data-aos="fade-up" style={{ marginTop: '60px' }}>
+                                <h3 style={{ marginTop: "60px" }}>Smart Cultural Precinct Mobile App Proposal</h3>
+                                <p style={{ textAlign: "left" }}>
+                                The Smart Cultural Precinct (SCP) initiative, developed by the Institute for Sustainable Urbanisation (ISU), aims to preserve the cultural heritage and sense of community in Hong Kong’s Central District amidst rapid urban development. Our team of 4 students traveled to Hong Kong in 2023 to collaborate on designing a mobile application to serve the goals of the SCP, focusing on creating a digital platform to promote and support the SCP region. The app aims to connect various stakeholders, including local businesses, residents, and tourists, while enhancing community engagement and cultural preservation.
+                                <br />
+                                </p>
+                                
+                                <img src="/assets/img/scp-methodology-flowchart.png" alt="Icon" className="me-3" width="640" height="360" data-aos="fade-up" />
+
+                                
+                                <p style={{ textAlign: "left" }} data-aos="fade-up">
+                                <br />
+                                As shown in the methodology flowchart above, our project objectives included identifying heritage sites, gathering community input, establishing the app’s identity, and evaluating its feasibility. We developed an interactive prototype that was refined through consultations with software developers, community members, and stakeholders. Over the course of this four-month effort, our team made several recommendations for future development and long-term maintenance of the SCP app, which can be found in more depth in the <a href="https://digital.wpi.edu/concern/student_works/70795c08j?locale=en" target="_blank">WPI digital library</a> of student works.
+                                </p>
+
+                                <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: "30px" }}>
+
+                                    <div style={{ flexGrow: 1, textAlign: 'center' }} data-aos="fade-up">
+                                        <img src="/assets/img/scp-app-prototype.png" alt="Icon" className="me-3" width="720" height="464" />
+                                        <p style={{ fontSize: "14px", textAlign: "center", color: "#666" }}>
+                                            Explore our interactive prototype of the SCP mobile app <a href="https://www.figma.com/proto/BHRSH5zFyOar2FzA4X3bcx/THE-SCP-app?scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=4-2&starting-point-node-id=197%3A2208&device-frame=0" target="_blank">in Figma</a>
+                                        </p>
+                                    </div>
+
+                                    <iframe src="https://drive.google.com/file/d/1ySaj26zC9KHjkbuInZXD9VZsm_hEbMYK/preview" data-aos="fade-up" width="45%" height="581px"></iframe>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        
                     </div>
                 </section>
             </main>
