@@ -226,7 +226,7 @@ export default function About() {
                         <h2>Education</h2>
                     </div>
 
-                    <div className="container" data-aos="fade-up" data-aos-delay="100" style={{ marginBottom: '5px' }}>
+                    <div className="edu-container" data-aos="fade-up" data-aos-delay="100" style={{ marginBottom: '30px' }}>
                         <div className="row justify-content-center">
                             <div className="col-lg-8 d-flex align-items-center mx-auto justify-content-between">
                             <img src="/assets/img/wpi-logo.png" alt="Icon" className="me-3" width="120" height="120" />
@@ -241,9 +241,7 @@ export default function About() {
                             </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="container" data-aos="fade-up" data-aos-delay="100" style={{ marginBottom: '30px' }}>
                         <div className="row justify-content-center">
                             <div className="col-lg-8 d-flex align-items-center mx-auto justify-content-between">
                             <img src="/assets/img/fps-logo.png" alt="Farmington logo" className="me-3" width="120" height="120" />
