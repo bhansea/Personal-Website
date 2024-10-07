@@ -1303,7 +1303,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Portfolio Section
+# Photos Section
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
   padding: 0;
@@ -1465,6 +1465,33 @@ a:focus {
 .portfolio-info a:focus {
   text-decoration: none;
   outline: none;
+}
+
+.glightbox .gslide img {
+  max-width: 80vw !important;  /* Ensure the width doesn't exceed 80% of the viewport */
+  max-height: 80vh !important; /* Ensure the height doesn't exceed 80% of the viewport */
+  object-fit: contain !important; /* Scale the image to fit within the box */
+  margin: auto !important; /* Center the image */
+}
+
+/* Target the container for the darkened background */
+.glightbox .gcontainer {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.glightbox .gslide .ginner-container img {
+  max-width: 80vw !important;
+  max-height: 80vh !important;
+  object-fit: contain !important;
+  margin: auto !important;
+} 
+
+.glightbox .gslide img {
+  max-width: 80vw !important;
+  max-height: 80vh !important;
+  object-fit: contain !important; /* Ensure the image scales without being cropped */
+  width: auto !important;
+  height: auto !important;
 }
 
 /*--------------------------------------------------------------

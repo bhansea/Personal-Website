@@ -47,6 +47,34 @@ const Photos = () => {
         }
       }, []);
 
+      useEffect(() => {
+        const lightbox = GLightbox({
+          selector: '.glightbox',
+          touchNavigation: true,
+          loop: true,
+          zoomable: true,
+          onOpen: () => {
+            document.querySelectorAll('.gslide img').forEach((img) => {
+              img.style.maxWidth = '80vw';
+              img.style.maxHeight = '80vh';
+            });
+            document.querySelectorAll('.gdesc, .gslide-description, .gslide-title, .gdesc-inner').forEach((el) => {
+                el.style.display = 'none'; // Hide the caption
+              });
+          },
+          onSlideChanged: (slide) => {
+            const img = slide.querySelector('img');
+            if (img) {
+              // Adjust the image size
+              img.style.maxWidth = '80vw';
+              img.style.maxHeight = '80vh';
+              img.style.width = 'auto'; // Reset width to auto
+              img.style.height = 'auto'; // Reset height to auto
+            }
+          },
+        });
+      }, []);
+
 
   return (
     <>
@@ -81,6 +109,7 @@ const Photos = () => {
 
               <div className="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
                 {/* Photos Items */}
+                {/* Row 1 */}
                 <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan">
                     <img src="/assets/img/photos/japan/EANG1614.png" className="img-fluid" alt="Japan 1" />
                     <div className="portfolio-info">
@@ -107,6 +136,8 @@ const Photos = () => {
                     <a href="/assets/img/photos/vietnam/FFMA3106.JPEG" title="Ninh Xuân" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
                     </div>
                 </div>
+
+                {/* Row 2 */}
 
                 <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
                     <img src="/assets/img/photos/south-korea/AEXY6203.JPEG" className="img-fluid" alt="South Korea 1" />
@@ -135,7 +166,35 @@ const Photos = () => {
                     </div>
                 </div>
 
+                {/* Row Template */}
+                {/*
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                    <img src="xxx" className="img-fluid" alt="South Korea x" />
+                    <div className="portfolio-info">
+                    <h4></h4>
+                    <p>July x, 2024</p>
+                    <a href="xxx" title="xxx" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
 
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam">
+                    <img src="xxx" className="img-fluid" alt="Vietnam x" />
+                    <div className="portfolio-info">
+                    <h4></h4>
+                    <p>July x, 2024</p>
+                    <a href="xxx" title="xxx" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan">
+                    <img src="xxx" className="img-fluid" alt="Japan x" />
+                    <div className="portfolio-info">
+                    <h4></h4>
+                    <p>July x, 2024</p>
+                    <a href="xxx" title="xxx" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+                */}
 
               </div>
             </div>
