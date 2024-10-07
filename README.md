@@ -9,6 +9,8 @@ npm install bootstrap
 npm install bootstrap-icons
 npm install react-slick slick-carousel
 npm install yet-another-react-lightbox
+npm install isotope-layout imagesloaded
+npm install glightbox
 
 ## Getting Started
 

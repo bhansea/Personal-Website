@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         <header id="header" className="header sticky-top">
           <div className="container-fluid d-flex align-items-center justify-content-between">
             {/* Logo (Sitename) */}
-            <Link href="/">
+            <Link href="/" style={{ outline:"none", textDecoration:"none" }}>
               <h1 className="sitename">Brandon</h1>
             </Link>
 

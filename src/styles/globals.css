@@ -87,6 +87,11 @@ a {
   transition: 0.3s;
 }
 
+p a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
@@ -191,7 +196,26 @@ h6 {
   text-transform: uppercase;
   color: var(--heading-color);
   margin: 0;
-  width: 150px; /* Kepe as same size as .header-social-links for centering */
+  width: 150px;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.header .sitename a {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.header .sitename a:focus,
+.header .sitename a:hover {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.header .sitename:focus,
+.header .sitename:hover {
+  text-decoration: none !important;
+  outline: none !important;
 }
 
 .header .header-social-links {
@@ -279,6 +303,7 @@ h6 {
     transition: 0.3s;
     position: relative;
     letter-spacing: 0.1px;
+    text-decoration: none !important;
   }
 
   .navmenu a i,
@@ -1322,9 +1347,63 @@ section,
   }
 }
 
-.portfolio .portfolio-item {
+.isotope-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between the images */
+}
+
+.portfolio-item {
   position: relative;
   overflow: hidden;
+  width: calc(33.333% - 20px);
+}
+
+.portfolio-item img {
+  width: 100%; /* Ensures that images take up the full width of the container */
+  height: auto; /* Allows images to maintain aspect ratio */
+  object-fit: cover; /* Crops images to fit within the grid */
+}
+
+/* Square images */
+
+.portfolio-item.square img {
+  width: 416px;
+  height: 416px;
+  object-fit: cover;
+}
+
+/* Short images */
+.portfolio-item.short img {
+  height: 475px; /* Make the image shorter */
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .portfolio-item {
+    width: calc(50% - 20px); /* 2 columns on smaller screens */
+  }
+
+  .portfolio-item.square {
+    width: calc(50% - 20px);
+    height: calc(50% - 20px); /* Square items adjust accordingly */
+  }
+}
+
+@media (max-width: 575px) {
+  .portfolio-item {
+    width: 100%; /* Full width for single column layout */
+  }
+
+  .portfolio-item.square {
+    width: 100%;
+    height: auto; /* Square should adapt to a full-width layout */
+  }
+
+  .portfolio-item.short img {
+    height: auto; /* Auto height for small screens */
+  }
 }
 
 .portfolio .portfolio-item .portfolio-info {
@@ -1376,6 +1455,16 @@ section,
 .portfolio .portfolio-item:hover .portfolio-info {
   opacity: 1;
   bottom: 0;
+}
+
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+.portfolio-info a:focus {
+  text-decoration: none;
+  outline: none;
 }
 
 /*--------------------------------------------------------------
