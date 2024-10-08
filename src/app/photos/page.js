@@ -131,9 +131,9 @@ const Photos = () => {
                 <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam square">
                     <img src="/assets/img/photos/vietnam/FFMA3106.JPEG" className="img-fluid" alt="Vietnam 1" />
                     <div className="portfolio-info">
-                    <h4>Ninh Xuân</h4>
+                    <h4>Ninh Xuân, Hoa Lư</h4>
                     <p>July 15, 2024</p>
-                    <a href="/assets/img/photos/vietnam/FFMA3106.JPEG" title="Ninh Xuân" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    <a href="/assets/img/photos/vietnam/FFMA3106.JPEG" title="Ninh Xuân, Hoa Lư" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
                     </div>
                 </div>
 
@@ -163,6 +163,245 @@ const Photos = () => {
                     <h4>Spain-zaka Slope</h4>
                     <p>July 3, 2024</p>
                     <a href="\assets\img\photos\japan\JIOO5904.png" title="Spain-zaka Slope" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                {/* Row 3 */}
+                
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam">
+                    <img src="\assets\img\photos\vietnam\LJOR8410.JPEG" className="img-fluid" alt="Vietnam 3" />
+                    <div className="portfolio-info">
+                    <h4>Koi Cafe</h4>
+                    <p>July 10, 2024</p>
+                    <a href="\assets\img\photos\vietnam\LJOR8410.JPEG" title="Koi Cafe" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan">
+                    <img src="\assets\img\photos\japan\LPQX3425.png" className="img-fluid" alt="Japan 3" />
+                    <div className="portfolio-info">
+                    <h4>Hour Sushi</h4>
+                    <p>July 3, 2024</p>
+                    <a href="\assets\img\photos\japan\LPQX3425.png" title="Hour Sushi" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+                
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                    <img src="\assets\img\photos\south-korea\NXYC2228.JPEG" className="img-fluid" alt="South Korea 3" />
+                    <div className="portfolio-info">
+                    <h4>Buddha Shrine</h4>
+                    <p>July 18, 2024</p>
+                    <a href="\assets\img\photos\south-korea\NXYC2228.JPEG" title="Buddha Shrine" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                {/* Row 4 */}
+                
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan">
+                    <img src="\assets\img\photos\japan\MPUE3449.png" className="img-fluid" alt="Japan 4" />
+                    <div className="portfolio-info">
+                    <h4>Sensō-ji</h4>
+                    <p>July 2, 2024</p>
+                    <a href="\assets\img\photos\japan\MPUE3449.png" title="Sensō-ji" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                    <img src="\assets\img\photos\south-korea\PAEE9631.JPEG" className="img-fluid" alt="South Korea 4" />
+                    <div className="portfolio-info">
+                    <h4>Palace Royal Guard Changing Ceremony</h4>
+                    <p>July 19, 2024</p>
+                    <a href="\assets\img\photos\south-korea\PAEE9631.JPEG" title="Palace Royal Guard Changing Ceremony" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam">
+                    <img src="\assets\img\photos\vietnam\LMEH0848.JPEG" className="img-fluid" alt="Vietnam 4" />
+                    <div className="portfolio-info">
+                    <h4>Ninh Bình</h4>
+                    <p>July 15, 2024</p>
+                    <a href="\assets\img\photos\vietnam\LMEH0848.JPEG" title="Ninh Bình" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                {/* Row 5 */}
+                
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                    <img src="\assets\img\photos\south-korea\PRNH5522.JPEG" className="img-fluid" alt="South Korea 5" />
+                    <div className="portfolio-info">
+                    <h4>Bongeunsa Temple</h4>
+                    <p>July 18, 2024</p>
+                    <a href="\assets\img\photos\south-korea\PRNH5522.JPEG" title="Bongeunsa Temple" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam">
+                    <img src="\assets\img\photos\vietnam\MKJD2079.JPEG" className="img-fluid" alt="Vietnam 5" />
+                    <div className="portfolio-info">
+                    <h4>Rail Cafe</h4>
+                    <p>July 14, 2024</p>
+                    <a href="\assets\img\photos\vietnam\MKJD2079.JPEG" title="Rail Cafe" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan">
+                    <img src="\assets\img\photos\japan\OEWL1568.png" className="img-fluid" alt="Japan 5" />
+                    <div className="portfolio-info">
+                    <h4>Gas Science Museum Rooftop</h4>
+                    <p>July 3, 2024</p>
+                    <a href="\assets\img\photos\japan\OEWL1568.png" title="Gas Science Museum Rooftop" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+                
+                {/* Row 6 */}
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam">
+                    <img src="\assets\img\photos\vietnam\MPXX8011.JPEG" className="img-fluid" alt="Vietnam 6" />
+                    <div className="portfolio-info">
+                    <h4>Bai Dinh Pagoda</h4>
+                    <p>July 15, 2024</p>
+                    <a href="\assets\img\photos\vietnam\MPXX8011.JPEG" title="Bai Dinh Pagoda" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan">
+                    <img src="\assets\img\photos\japan\QSNH4741.png" className="img-fluid" alt="Japan 6" />
+                    <div className="portfolio-info">
+                    <h4>Taitō City Street</h4>
+                    <p>July 2, 2024</p>
+                    <a href="\assets\img\photos\japan\QSNH4741.png" title="Taitō City Street" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                    <img src="\assets\img\photos\south-korea\WVMS5850.JPEG" className="img-fluid" alt="South Korea 6" />
+                    <div className="portfolio-info">
+                    <h4>Myeong-dong Street</h4>
+                    <p>July 17, 2024</p>
+                    <a href="\assets\img\photos\south-korea\WVMS5850.JPEG" title="Myeong-dong Street" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+                
+                {/* Row 7 */}
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam">
+                    <img src="\assets\img\photos\vietnam\NDHM8386.JPEG" className="img-fluid" alt="Vietnam 7" />
+                    <div className="portfolio-info">
+                    <h4>Tràng An Temple</h4>
+                    <p>July 15, 2024</p>
+                    <a href="\assets\img\photos\vietnam\NDHM8386.JPEG" title="Tràng An Temple" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan">
+                    <img src="\assets\img\photos\japan\ROFX9665.png" className="img-fluid" alt="Japan 7" />
+                    <div className="portfolio-info">
+                    <h4>Shinjuku Godzilla Head</h4>
+                    <p>July 5, 2024</p>
+                    <a href="\assets\img\photos\japan\ROFX9665.png" title="Shinjuku Godzilla Head" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                    <img src="\assets\img\photos\south-korea\XAAC8644.JPEG" className="img-fluid" alt="South Korea 7" />
+                    <div className="portfolio-info">
+                    <h4>Cheonggyecheon</h4>
+                    <p>July 20, 2024</p>
+                    <a href="\assets\img\photos\south-korea\XAAC8644.JPEG" title="Cheonggyecheon" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+                
+                {/* Row 8 */}
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                    <img src="\assets\img\photos\south-korea\XIQR5401.JPEG" className="img-fluid" alt="South Korea 8" />
+                    <div className="portfolio-info">
+                    <h4>In Gyeongbokgung Palace</h4>
+                    <p>July 19, 2024</p>
+                    <a href="\assets\img\photos\south-korea\XIQR5401.JPEG" title="In Gyeongbokgung Palace" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan">
+                    <img src="\assets\img\photos\japan\XOGU2150.png" className="img-fluid" alt="Japan 8" />
+                    <div className="portfolio-info">
+                    <h4>Shinjuku Street</h4>
+                    <p>July 5, 2024</p>
+                    <a href="\assets\img\photos\japan\XOGU2150.png" title="Shinjuku Street" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam">
+                    <img src="\assets\img\photos\vietnam\QBQA6981.JPEG" className="img-fluid" alt="Vietnam 8" />
+                    <div className="portfolio-info">
+                    <h4>Fishing Boat Vietnam</h4>
+                    <p>July 15, 2024</p>
+                    <a href="\assets\img\photos\vietnam\QBQA6981.JPEG" title="Fishing Boat Vietnam" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                {/* Row 9 */}
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam">
+                    <img src="\assets\img\photos\vietnam\VMHN4729.JPEG" className="img-fluid" alt="Vietnam 9" />
+                    <div className="portfolio-info">
+                    <h4>Hạ Long Bay</h4>
+                    <p>July 11, 2024</p>
+                    <a href="\assets\img\photos\vietnam\VMHN4729.JPEG" title="Hạ Long Bay" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam">
+                    <img src="\assets\img\photos\vietnam\YDKF7821.JPEG" className="img-fluid" alt="Vietnam 10" />
+                    <div className="portfolio-info">
+                    <h4>Lotus Fields</h4>
+                    <p>July 15, 2024</p>
+                    <a href="\assets\img\photos\vietnam\YDKF7821.JPEG" title="Lotus Fields" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+                
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                    <img src="\assets\img\photos\south-korea\YBQJ4786.JPEG" className="img-fluid" alt="South Korea 9" />
+                    <div className="portfolio-info">
+                    <h4>In Changgyeonggung Palace</h4>
+                    <p>July 19, 2024</p>
+                    <a href="\assets\img\photos\south-korea\YBQJ4786.JPEG" title="In Changgyeonggung Palace" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                {/* Row 10 */}
+                
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-hong-kong">
+                    <img src="\assets\img\photos\hong-kong\building.jpg" className="img-fluid" alt="Hong Kong 1" />
+                    <div className="portfolio-info">
+                    <h4>The Arch Skyscraper</h4>
+                    <p>January 8, 2023</p>
+                    <a href="\assets\img\photos\hong-kong\building.jpg" title="The Arch Skyscraper" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-hong-kong">
+                    <img src="\assets\img\photos\hong-kong\cow.jpg" className="img-fluid" alt="Hong Kong 2" />
+                    <div className="portfolio-info">
+                    <h4>Cow</h4>
+                    <p>January 7, 2023</p>
+                    <a href="\assets\img\photos\hong-kong\cow.jpg" title="Cow" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-hong-kong">
+                    <img src="\assets\img\photos\hong-kong\llama_island.jpg" className="img-fluid" alt="Hong Kong 3" />
+                    <div className="portfolio-info">
+                    <h4>Lamma Island</h4>
+                    <p>January 8, 2023</p>
+                    <a href="\assets\img\photos\hong-kong\llama_island.jpg" title="Lamma Island" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
+                    </div>
+                </div>
+                
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-hong-kong">
+                    <img src="\assets\img\photos\hong-kong\temple.jpg" className="img-fluid" alt="Hong Kong 4" />
+                    <div className="portfolio-info">
+                    <h4>Ngong Ping Temple</h4>
+                    <p>January 7, 2023</p>
+                    <a href="\assets\img\photos\hong-kong\temple.jpg" title="Ngong Ping Temple" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
                     </div>
                 </div>
 
