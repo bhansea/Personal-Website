@@ -18,20 +18,17 @@ import { Pagination } from 'swiper/modules';
 import 'yet-another-react-lightbox/styles.css';
 import Lightbox from 'yet-another-react-lightbox';
 
-
-// Dynamically import Swiper to prevent SSR issues
 const Navigation = dynamic(() => import('swiper').then(mod => mod.Navigation), { ssr: false });
 
 export default function About() {
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
-        // Initialize AOS for scroll animations
         AOS.init({
             duration: 1000,
             easing: 'ease-in-out',
-            once: false, // Allow it to happen multiple times
-            mirror: true, // Let the animation happen when scrolling back up
+            once: false,
+            mirror: true,
         });
 
         const progressBars = document.querySelectorAll('.progress-bar');
@@ -40,13 +37,10 @@ export default function About() {
         bar.style.width = `${percentage}%`;
         });
 
-    
-
-        // Number animation when the section comes into view
         const animateNumbers = (entries, observer) => {
             entries.forEach(entry => {
                 const counters = entry.target.querySelectorAll('.counter');
-                const speed = 200; // Control the speed of counting
+                const speed = 200;
 
                 if (entry.isIntersecting) {
                     counters.forEach(counter => {
@@ -65,7 +59,6 @@ export default function About() {
                         updateCount();
                     });
                 } else {
-                    // Reset counters to 0 when out of view
                     counters.forEach(counter => {
                         counter.innerText = '0';
                     });
@@ -74,7 +67,7 @@ export default function About() {
         };
 
         const observer = new IntersectionObserver(animateNumbers, {
-            threshold: 0.6, // Trigger animation when 60% of the element is visible
+            threshold: 0.6,
         });
 
         const factSections = document.querySelectorAll('.fact-item');
@@ -84,53 +77,47 @@ export default function About() {
 
     }, []);
 
-    const [displayText, setDisplayText] = useState(''); // Empty at first
-    const fullText = 'Software Developer & Data Engineer. '; // Full text you want to type
+    const [displayText, setDisplayText] = useState('');
+    const fullText = 'Software Developer & Data Engineer. ';
 
     useEffect(() => {
         let index = 0;
         const typingInterval = setInterval(() => {
             if (index <= fullText.length) {
-                setDisplayText(fullText.slice(0, index)); // Slices up to current index
+                setDisplayText(fullText.slice(0, index));
                 index++;
             } else {
-                clearInterval(typingInterval); // Stop when done typing
+                clearInterval(typingInterval);
             }
-        }, 100); // Adjust typing speed (100ms per character)
+        }, 100);
     
-        return () => clearInterval(typingInterval); // Cleanup interval on unmount
+        return () => clearInterval(typingInterval);
     }, []);
 
     useEffect(() => {
-        // Initialize AOS for scroll animations
         AOS.init({
             duration: 1000,
             easing: 'ease-in-out',
-            once: false, // Allow it to happen multiple times
-            mirror: true, // Let the animation happen when scrolling back up
+            once: false,
+            mirror: true,
         });
     
-        // Intersection observer for progress bars
         const progressBars = document.querySelectorAll('.progress-bar');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 const bar = entry.target;
                 const percentage = bar.getAttribute('data-percentage');
                 if (entry.isIntersecting) {
-                    // Set the width to trigger the animation
                     bar.style.width = `${percentage}%`;
                 } else {
-                    // Reset the width to 0 when it's out of view
                     bar.style.width = '0';
                 }
             });
-        }, { threshold: 0.6 });  // Adjust threshold if necessary
+        }, { threshold: 0.6 });
     
-        // Observe each progress bar
         progressBars.forEach(bar => observer.observe(bar));
     
         return () => {
-            // Cleanup observers when component unmounts
             progressBars.forEach(bar => observer.unobserve(bar));
         };
 
@@ -182,7 +169,6 @@ export default function About() {
                                 <Image src="/assets/img/grad-pic.jpg" className="img-fluid" alt="Profile" width={440} height={540} />
                             </div>
                             <div className="col-lg-8 content">
-                                {/* Typing animation applied here */}
                                 <h2 style={{ marginTop: '10px' }} className="typing-effect">{displayText}</h2>
                                 <p className="fst-italic py-3" style={{ fontSize: '17px', marginTop: '0px !important' }}>
                                     Skilled in software development, data engineering, and automation with a strong focus on Java, PowerShell, SQL, and Python. Currently seeking a job involving software development, data engineering, or infrastructure.

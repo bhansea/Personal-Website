@@ -2,7 +2,7 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'; // Import usePathname
+import { usePathname } from 'next/navigation';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     AOS.init({ duration: 1000 });
   }, []);
 
-  const pathname = usePathname(); // Get current pathname
+  const pathname = usePathname();
 
   return (
     <html lang="en">

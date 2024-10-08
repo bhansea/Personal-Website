@@ -2,92 +2,82 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import 'aos/dist/aos.css'; // Import AOS CSS
+import 'aos/dist/aos.css';
 import AOS from 'aos';
 
 export default function Home() {
-  const [displayedName, setDisplayedName] = useState(""); // Initially empty
+  const [displayedName, setDisplayedName] = useState("");
   const [displayedSubtitle, setDisplayedSubtitle] = useState("");
   const [nameIndex, setNameIndex] = useState(0);
   const [subtitleIndex, setSubtitleIndex] = useState(0);
-  const [showCursor, setShowCursor] = useState(true); // For blinking cursor
-  const [typingCompleted, setTypingCompleted] = useState(false); // To track when typing is complete
+  const [showCursor, setShowCursor] = useState(true);
+  const [typingCompleted, setTypingCompleted] = useState(false);
 
   const nameText = "Brandon Luong";
   const subtitleText = "Aspiring software engineer from Farmington, Connecticut";
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,  // Adjust the animation duration
-      easing: 'ease-in-out',  // Customize the easing effect
-      once: true,  // Whether animation should happen only once
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
     });
   }, []);
 
-  // Typing animation for the name
   useEffect(() => {
     if (nameIndex < nameText.length) {
       setTimeout(() => {
         setDisplayedName(nameText.slice(0, nameIndex + 1));
         setNameIndex(nameIndex + 1);
-      }, 100);  // Adjust speed of typing for the name
+      }, 100);
     } else if (nameIndex === nameText.length && subtitleIndex === 0) {
-      setTimeout(() => setSubtitleIndex(1), 500);  // Start subtitle after a brief pause
+      setTimeout(() => setSubtitleIndex(1), 500);
     }
   }, [nameIndex]);
 
-  // Typing animation for the subtitle after name is fully typed
   useEffect(() => {
     if (subtitleIndex > 0 && subtitleIndex <= subtitleText.length) {
       setTimeout(() => {
         setDisplayedSubtitle(subtitleText.slice(0, subtitleIndex));
         setSubtitleIndex(subtitleIndex + 1);
-      }, 50);  // Adjust speed of typing for the subtitle
+      }, 50);
     }
-    // If subtitle finished typing, set typingCompleted to true
     if (subtitleIndex === subtitleText.length) {
       setTypingCompleted(true);
     }
   }, [subtitleIndex]);
 
-  // Blinking cursor effect
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setShowCursor((prev) => !prev); // Toggle cursor visibility
+      setShowCursor((prev) => !prev);
     }, 500);
-    return () => clearInterval(intervalId); // Clean up on component unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   useEffect(() => {
-    // Initialize AOS for scroll animations
     AOS.init({
         duration: 1000,
         easing: 'ease-in-out',
-        once: false, // Allow it to happen multiple times
-        mirror: true, // Let the animation happen when scrolling back up
+        once: false,
+        mirror: true,
     });
 
-    // Intersection observer for progress bars
     const progressBars = document.querySelectorAll('.progress-bar');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             const bar = entry.target;
             const percentage = bar.getAttribute('data-percentage');
             if (entry.isIntersecting) {
-                // Set the width to trigger the animation
                 bar.style.width = `${percentage}%`;
             } else {
-                // Reset the width to 0 when it's out of view
                 bar.style.width = '0';
             }
         });
-    }, { threshold: 0.6 });  // Adjust threshold if necessary
+    }, { threshold: 0.6 });
 
-    // Observe each progress bar
     progressBars.forEach(bar => observer.observe(bar));
 
     return () => {
-        // Cleanup observers when component unmounts
         progressBars.forEach(bar => observer.unobserve(bar));
     };
 

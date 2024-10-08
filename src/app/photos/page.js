@@ -17,7 +17,6 @@ const Photos = () => {
 
     useEffect(() => {
         if (typeof window !== "undefined") {
-          // Isotope and other JS vendor functionality
           const Isotope = require('isotope-layout');
           const imagesLoaded = require('imagesloaded');
       
@@ -26,20 +25,16 @@ const Photos = () => {
             layoutMode: 'masonry',
           });
       
-          // Ensure Isotope is fully initialized after images are loaded
           imagesLoaded('.isotope-container', function () {
             iso.layout();
           });
       
-          // Add click event listeners to filter buttons
           const filters = document.querySelectorAll('.portfolio-filters li');
           filters.forEach(filter => {
             filter.addEventListener('click', function() {
-              // Remove active class from all buttons and add to the clicked one
               filters.forEach(btn => btn.classList.remove('filter-active'));
               this.classList.add('filter-active');
       
-              // Get the filter value from the clicked button and apply it
               const filterValue = this.getAttribute('data-filter');
               iso.arrange({ filter: filterValue });
             });
@@ -59,17 +54,16 @@ const Photos = () => {
               img.style.maxHeight = '80vh';
             });
             document.querySelectorAll('.gdesc, .gslide-description, .gslide-title, .gdesc-inner').forEach((el) => {
-                el.style.display = 'none'; // Hide the caption
+                el.style.display = 'none';
               });
           },
           onSlideChanged: (slide) => {
             const img = slide.querySelector('img');
             if (img) {
-              // Adjust the image size
               img.style.maxWidth = '80vw';
               img.style.maxHeight = '80vh';
-              img.style.width = 'auto'; // Reset width to auto
-              img.style.height = 'auto'; // Reset height to auto
+              img.style.width = 'auto';
+              img.style.height = 'auto';
             }
           },
         });
