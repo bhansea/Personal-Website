@@ -58,49 +58,105 @@ export default function Home() {
     return () => clearInterval(intervalId); // Clean up on component unmount
   }, []);
 
+  useEffect(() => {
+    // Initialize AOS for scroll animations
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: false, // Allow it to happen multiple times
+        mirror: true, // Let the animation happen when scrolling back up
+    });
+
+    // Intersection observer for progress bars
+    const progressBars = document.querySelectorAll('.progress-bar');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const bar = entry.target;
+            const percentage = bar.getAttribute('data-percentage');
+            if (entry.isIntersecting) {
+                // Set the width to trigger the animation
+                bar.style.width = `${percentage}%`;
+            } else {
+                // Reset the width to 0 when it's out of view
+                bar.style.width = '0';
+            }
+        });
+    }, { threshold: 0.6 });  // Adjust threshold if necessary
+
+    // Observe each progress bar
+    progressBars.forEach(bar => observer.observe(bar));
+
+    return () => {
+        // Cleanup observers when component unmounts
+        progressBars.forEach(bar => observer.unobserve(bar));
+    };
+
+}, []);
+
   return (
-    <div style={styles.container} data-aos="fade-in">
-      <div style={styles.overlay} data-aos="zoom-in">
-        <div style={styles.content}>
-          <div style={styles.profileImage} data-aos="fade-up">
-            <Image
-              src="/assets/img/profile-img.jpg"
-              alt="Profile Picture"
-              width={250}
-              height={250}
-              style={{ borderRadius: '50%' }}
-            />
+    <>
+      <div style={styles.container} data-aos="fade-in">
+        <div style={styles.overlay} data-aos="zoom-in">
+          <div style={styles.content}>
+            <div style={styles.profileImage} data-aos="fade-up">
+              <Image
+                src="/assets/img/profile-img.jpg"
+                alt="Profile Picture"
+                width={250}
+                height={250}
+                style={{ borderRadius: '50%' }}
+              />
+            </div>
+            
+            <h1 style={styles.name} data-aos="fade-up" data-aos-delay="200">
+              {displayedName}
+              {!typingCompleted && nameIndex < nameText.length && (
+                <span style={{ visibility: showCursor ? 'visible' : 'hidden' }}>|</span>
+              )}
+            </h1>
+
+            <div style={styles.line}></div>
+
+            <p style={styles.subTitle} data-aos="fade-up" data-aos-delay="200">
+              {displayedSubtitle}
+              {!typingCompleted && subtitleIndex > 0 && subtitleIndex <= subtitleText.length && (
+                <span style={{ visibility: showCursor}}>|</span>
+              )}
+              {typingCompleted && showCursor && <span style={{ visibility: showCursor ? 'visible' : 'hidden', position: "relative" }}>|</span>}
+            </p>
+
+
+            <button
+              style={styles.button}
+              data-aos="zoom-in"
+              data-aos-delay="400"
+              onClick={() => window.location.href = '/about'}
+            >
+              ABOUT ME
+            </button>
+
           </div>
-          
-          <h1 style={styles.name} data-aos="fade-up" data-aos-delay="200">
-            {displayedName}
-            {!typingCompleted && nameIndex < nameText.length && (
-              <span style={{ visibility: showCursor ? 'visible' : 'hidden' }}>|</span>
-            )}
-          </h1>
-
-          <div style={styles.line}></div>
-
-          <p style={styles.subTitle} data-aos="fade-up" data-aos-delay="200">
-            {displayedSubtitle}
-            {!typingCompleted && subtitleIndex > 0 && subtitleIndex <= subtitleText.length && (
-              <span style={{ visibility: showCursor}}>|</span>
-            )}
-            {typingCompleted && showCursor && <span style={{ visibility: showCursor ? 'visible' : 'hidden', position: "relative" }}>|</span>}
-          </p>
-
-
-          <button
-            style={styles.button}
-            data-aos="zoom-in"
-            data-aos-delay="400"
-            onClick={() => window.location.href = '/about'}
-          >
-            ABOUT ME
-          </button>
         </div>
       </div>
-    </div>
+
+      <main className="main">
+        <section id="main" className="about section">
+            <div className="container section-title" data-aos="fade-up" style={styles.newSection}>
+              <p>
+                Hi, I'm Brandon, a Chinese American with a passion for data exploration and technology. I recently graduated from Worcester Polytechnic Institute with a Bachelor's Degree in Computer Science. Currently, I work at United Parcel Service as part of the Enterprise Systems Management team, and I’m also actively seeking new job opportunities to further my career.
+                <br /><br />
+                Feel free to explore my website, where I’ve shared some of my work and projects. Also, don’t forget to check out the photo gallery, where I’ve posted some pictures from my travels—capturing many of the diverse experiences that continue inspire me.
+                <br /><br />
+                Thank you for visiting, and happy exploring!
+                <br /><br />
+                Best,
+                <br />
+                Brandon
+              </p>
+            </div>
+          </section>
+      </main>
+    </>
   );
 }
 
@@ -161,5 +217,13 @@ const styles = {
     fontWeight: '600',
     fontSize: '12px',
     letterSpacing: '1px',
+  },
+  newSection: {
+    backgroundColor: 'white',
+    color: 'black',
+    padding: '20px 100px',
+    textAlign: 'left',
+    marginTop: '20px',
+    fontSize: '18px',
   },
 };
