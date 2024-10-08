@@ -5,15 +5,33 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/globals.css';
 
 export default function RootLayout({ children }) {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const pathname = usePathname();
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  const pathname = usePathname();
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <html lang="en">
@@ -63,6 +81,14 @@ export default function RootLayout({ children }) {
 
         {/* Main Content */}
         {children}
+
+        {/* Scroll to Top Button */}
+        <div
+          className={`scroll-top ${showScrollTop ? 'active' : ''}`}
+          onClick={scrollToTop}
+        >
+          <i className="bi bi-arrow-up-short"></i>
+        </div>
 
         {/* Footer */}
         <footer id="footer" className="footer light-background">
