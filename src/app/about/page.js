@@ -447,6 +447,27 @@ export default function About() {
                             </div>
                         </div>
 
+
+                        <div className="horizontal-line" style={{marginTop: '35px' }}></div>
+
+                        {/* Research Paper */}
+                        <div className="section-title" style={{ paddingBottom: '0px' }}>
+                            <div className="container" data-aos="fade-up" style={{ marginTop: '60px' }}>
+                                <h3 style={{ marginTop: "60px" }}>Research Paper on Impact of AI on Education Systems</h3>
+                                <p style={{ textAlign: "left", marginBottom: "30px" }}>
+                                    During my time at WPI, I wrote an academic research paper that explores the integration of artificial intelligence (AI) in education. The paper examines how AI can enhance classrooms through personalized learning experiences and improved teaching practices. However, it also addresses the ethical challenges and the essential role of human educators in maintaining a balance between AI-driven solutions and human-centric skills. This project advocates for thoughtful, responsible AI use that complements, rather than replaces, traditional teaching methods.
+                                <br />
+                                </p>
+
+                                <iframe
+                                    src="\assets\Redefining Learning - Evaluating the Uses of AI in Education Systems.pdf"
+                                    width="100%"
+                                    height="500px"
+                                    style={{ border: 'none', margin: '30px 0px' }}
+                                    title="Research Paper PDF"
+                                />
+                            </div>
+                        </div>
                         
                     </div>
                 </section>
