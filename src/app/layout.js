@@ -2,6 +2,7 @@
 
 import Head from 'next/head';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'; // Import usePathname
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { useEffect } from 'react';
@@ -11,6 +12,8 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  const pathname = usePathname(); // Get current pathname
 
   return (
     <html lang="en">
@@ -32,27 +35,27 @@ export default function RootLayout({ children }) {
             {/* Centered Navigation */}
             <nav id="navmenu" className="navmenu d-flex justify-content-center align-items-center">
               <ul className="d-flex align-items-center justify-content-center">
-                <li><Link href="/">Home</Link></li>
-                <li><Link href="/about">About</Link></li>
-                <li><Link href="/resume">Resume</Link></li>
-                <li><Link href="/photos">Photos</Link></li>
-                <li><Link href="/contact">Contact</Link></li>
+                <li><Link href="/" className={pathname === '/' ? 'active' : ''}>Home</Link></li>
+                <li><Link href="/about" className={pathname === '/about' ? 'active' : ''}>About</Link></li>
+                <li><Link href="/resume" className={pathname === '/resume' ? 'active' : ''}>Resume</Link></li>
+                <li><Link href="/photos" className={pathname === '/photos' ? 'active' : ''}>Photos</Link></li>
+                <li><Link href="/contact" className={pathname === '/contact' ? 'active' : ''}>Contact</Link></li>
               </ul>
             </nav>
 
             {/* Social links */}
             <div className="header-social-links">
+              <a href="https://github.com/bhansea"
+                 className="github"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i className="bi bi-github"></i>
+              </a>
               <a href="https://www.linkedin.com/in/brandon-luong-12-/" 
                  className="linkedin"
                  target="_blank"
                  rel="noopener noreferrer">
                 <i className="bi bi-linkedin"></i>
-              </a>
-              <a href="https://github.com/bhansea"
-                className="github"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i className="bi bi-github"></i>
               </a>
             </div>
           </div>
@@ -72,17 +75,17 @@ export default function RootLayout({ children }) {
               </p>
             </div>
             <div className="social-links d-flex justify-content-center">
+              <a href="https://github.com/bhansea"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <i className="bi bi-github"></i>
+              </a>
               <a
                 href="https://www.linkedin.com/in/brandon-luong-12-/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="bi bi-linkedin"></i>
-              </a>
-              <a href="https://github.com/bhansea"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i className="bi bi-github"></i>
               </a>
             </div>
             <div className="credits">
@@ -97,8 +100,6 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </footer>
-
-
       </body>
     </html>
   );

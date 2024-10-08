@@ -171,9 +171,6 @@ export default function About() {
                 <section id="about" className="about section" style={{paddingBottom: '0px'}}>
                     <div className="container section-title" data-aos="fade-up" style={{paddingBottom: '10px' }}>
                         <h2>About</h2>
-                        <p>
-                            Driven by a passion for problem-solving and data insights, I combine technical expertise with a collaborative mindset to deliver solutions that enhance team efficiency and achieve business goals.
-                        </p>
                     </div>
 
                     <div className="container" data-aos="fade-up" data-aos-delay="100">
@@ -237,7 +234,7 @@ export default function About() {
                                 <span>Aug. 2020 - May 2024</span>
                                 </p>
                                 <p>Bachelor’s Degree in Computer Science</p>
-                                <p>GPA: 3.61, High Distinction</p>
+                                <p>GPA: 3.61, Distinction</p>
                             </div>
                             </div>
                         </div>

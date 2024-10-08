@@ -270,6 +270,37 @@ h6 {
     font-family: var(--nav-font);
   }
 
+  .navmenu a.active {
+    color: var(--nav-hover-color); /* Accent color for active link */
+  }
+  
+  .navmenu a.active:before {
+    visibility: visible;
+    width: 50%;
+  }
+  
+  .navmenu a:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -6px; /* Adjust this value as needed for the vertical distance */
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline */
+    background-color: var(--nav-hover-color);
+    visibility: hidden;
+    width: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navmenu a:hover:before,
+  .navmenu li:hover>a:before,
+  .navmenu .active:before {
+    visibility: visible;
+    width: 100%; /* Underline spans full width of the text */
+    left: 50%;
+    transform: translateX(-50%); /* Keep the underline centered */
+  }
+
   .navmenu ul {
     list-style: none;
     margin: 0;
@@ -302,7 +333,7 @@ h6 {
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
-    transition: 0.3s;
+    transition: 0.4s;
     position: relative;
     letter-spacing: 0.1px;
     text-decoration: none !important;
@@ -313,7 +344,7 @@ h6 {
     font-size: 12px;
     line-height: 0;
     margin-left: 5px;
-    transition: 0.3s;
+    transition: 0.4s;
   }
 
   .navmenu>ul>li>a:before {
@@ -325,14 +356,14 @@ h6 {
     background-color: var(--nav-hover-color);
     visibility: hidden;
     width: 0px;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
   }
 
   .navmenu a:hover:before,
   .navmenu li:hover>a:before,
   .navmenu .active:before {
     visibility: visible;
-    width: 25px;
+    width: 50%;
   }
 
   .navmenu li:hover>a,
@@ -351,7 +382,7 @@ h6 {
     left: 14px;
     top: 130%;
     opacity: 0;
-    transition: 0.3s;
+    transition: 0.4s;
     border-radius: 4px;
     z-index: 99;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
