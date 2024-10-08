@@ -151,7 +151,7 @@ const styles = {
   button: {
     padding: '12px 40px',
     marginBottom: '30px',
-    marginTop: '25px',
+    marginTop: '40px',
     backgroundColor: '#3c94af',
     color: 'white',
     border: 'none',

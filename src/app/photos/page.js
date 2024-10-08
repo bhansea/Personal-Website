@@ -94,7 +94,7 @@ const Photos = () => {
 
           <div className="container section-title" data-aos="fade-up">
             <h2>Photos</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            <p>Here is a collection of photos from my recent travels! While I’m by no means a professional photographer, I greatly enjoy capturing moments that allow me to relive the diverse experiences and cultures I’ve encountered. From the bustling city streets of Hong Kong to the incredible natural landscapes of Vietnam, these memories hold significant meaning—they serve as a reminder of the beauty and diversity of the world, and the rich experiences that come from exploring new places. I hope these photos allow you to share in those moments with me!</p>
           </div>
 
           <div className="container">
@@ -119,7 +119,7 @@ const Photos = () => {
                     </div>
                 </div>
 
-                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea short">
                     <img src="\assets\img\photos\south-korea\BGJM4828.JPEG" className="img-fluid" alt="South Korea 2" />
                     <div className="portfolio-info">
                     <h4>Myeongdong Night Market</h4>
@@ -139,7 +139,7 @@ const Photos = () => {
 
                 {/* Row 2 */}
 
-                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea short">
                     <img src="/assets/img/photos/south-korea/AEXY6203.JPEG" className="img-fluid" alt="South Korea 1" />
                     <div className="portfolio-info">
                     <h4>Starfield Library (COEX)</h4>
@@ -186,7 +186,7 @@ const Photos = () => {
                     </div>
                 </div>
                 
-                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea square">
                     <img src="\assets\img\photos\south-korea\NXYC2228.JPEG" className="img-fluid" alt="South Korea 3" />
                     <div className="portfolio-info">
                     <h4>Buddha Shrine</h4>
@@ -206,7 +206,7 @@ const Photos = () => {
                     </div>
                 </div>
 
-                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea square">
                     <img src="\assets\img\photos\south-korea\PAEE9631.JPEG" className="img-fluid" alt="South Korea 4" />
                     <div className="portfolio-info">
                     <h4>Palace Royal Guard Changing Ceremony</h4>
@@ -244,7 +244,7 @@ const Photos = () => {
                     </div>
                 </div>
 
-                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan">
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan square">
                     <img src="\assets\img\photos\japan\OEWL1568.png" className="img-fluid" alt="Japan 5" />
                     <div className="portfolio-info">
                     <h4>Gas Science Museum Rooftop</h4>
@@ -255,7 +255,7 @@ const Photos = () => {
                 
                 {/* Row 6 */}
 
-                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam">
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam short">
                     <img src="\assets\img\photos\vietnam\MPXX8011.JPEG" className="img-fluid" alt="Vietnam 6" />
                     <div className="portfolio-info">
                     <h4>Bai Dinh Pagoda</h4>
@@ -263,7 +263,7 @@ const Photos = () => {
                     <a href="\assets\img\photos\vietnam\MPXX8011.JPEG" title="Bai Dinh Pagoda" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
                     </div>
                 </div>
-                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan">
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan short">
                     <img src="\assets\img\photos\japan\QSNH4741.png" className="img-fluid" alt="Japan 6" />
                     <div className="portfolio-info">
                     <h4>Taitō City Street</h4>
@@ -271,7 +271,7 @@ const Photos = () => {
                     <a href="\assets\img\photos\japan\QSNH4741.png" title="Taitō City Street" className="glightbox preview-link"><i className="bi bi-zoom-in"></i></a>
                     </div>
                 </div>
-                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea square">
                     <img src="\assets\img\photos\south-korea\WVMS5850.JPEG" className="img-fluid" alt="South Korea 6" />
                     <div className="portfolio-info">
                     <h4>Myeong-dong Street</h4>
@@ -311,7 +311,7 @@ const Photos = () => {
                 
                 {/* Row 8 */}
 
-                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea">
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-south-korea square">
                     <img src="\assets\img\photos\south-korea\XIQR5401.JPEG" className="img-fluid" alt="South Korea 8" />
                     <div className="portfolio-info">
                     <h4>In Gyeongbokgung Palace</h4>
@@ -320,7 +320,7 @@ const Photos = () => {
                     </div>
                 </div>
 
-                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan">
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-japan square">
                     <img src="\assets\img\photos\japan\XOGU2150.png" className="img-fluid" alt="Japan 8" />
                     <div className="portfolio-info">
                     <h4>Shinjuku Street</h4>
@@ -329,7 +329,7 @@ const Photos = () => {
                     </div>
                 </div>
 
-                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam">
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam short">
                     <img src="\assets\img\photos\vietnam\QBQA6981.JPEG" className="img-fluid" alt="Vietnam 8" />
                     <div className="portfolio-info">
                     <h4>Fishing Boat Vietnam</h4>
@@ -349,7 +349,7 @@ const Photos = () => {
                     </div>
                 </div>
 
-                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam">
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-vietnam square">
                     <img src="\assets\img\photos\vietnam\YDKF7821.JPEG" className="img-fluid" alt="Vietnam 10" />
                     <div className="portfolio-info">
                     <h4>Lotus Fields</h4>
@@ -369,7 +369,7 @@ const Photos = () => {
 
                 {/* Row 10 */}
                 
-                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-hong-kong">
+                <div className="col-lg-4 col-md-6 portfolio-item isotope-item filter-hong-kong short">
                     <img src="\assets\img\photos\hong-kong\building.jpg" className="img-fluid" alt="Hong Kong 1" />
                     <div className="portfolio-info">
                     <h4>The Arch Skyscraper</h4>

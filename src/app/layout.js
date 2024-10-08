@@ -75,13 +75,13 @@ export default function RootLayout({ children }) {
               </a>
             </div>
             <div className="credits">
-              See here for{" "}
+              Designed by{" "}
               <a
                 href="https://bootstrapmade.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                references
+                Bootstrap
               </a>
             </div>
           </div>
