@@ -48,6 +48,12 @@ export default function RootLayout({ children }) {
                  rel="noopener noreferrer">
                 <i className="bi bi-linkedin"></i>
               </a>
+              <a href="https://github.com/bhansea"
+                className="github"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i className="bi bi-github"></i>
+              </a>
             </div>
           </div>
         </header>
@@ -72,6 +78,11 @@ export default function RootLayout({ children }) {
                 rel="noopener noreferrer"
               >
                 <i className="bi bi-linkedin"></i>
+              </a>
+              <a href="https://github.com/bhansea"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i className="bi bi-github"></i>
               </a>
             </div>
             <div className="credits">
