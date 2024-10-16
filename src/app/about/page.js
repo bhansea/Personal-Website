@@ -234,7 +234,7 @@ export default function About() {
                                 <span className="flex-grow-1 border-bottom mx-3"></span>
                                 <span>Sep. 2016 - Jun. 2020</span>
                                 </p>
-                                <p>Bachelor’s Degree in Computer Science</p>
+                                <p>High School Diploma</p>
                                 <p>GPA: 4.0, First Honors</p>
                             </div>
                             </div>

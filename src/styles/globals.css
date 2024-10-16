@@ -738,21 +738,8 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-/* .hero {
-  width: 100%;
-  min-height: calc(100vh - 82px);
-  position: relative;
-  padding: 80px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; delete?
-}
- */
 
- .hero {
-  position: relative;
-  text-align: center;
+.heroContainer {
   background-image: url('/assets/img/hero-bg.jpg');
   background-size: cover;
   background-position: center;
@@ -760,94 +747,96 @@ section,
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media (max-width: 1200px) {
-  .hero {
-    min-height: calc(100vh - 68px);
-  }
-}
-
-.hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.hero .container {
   position: relative;
-  z-index: 3;
 }
 
-.hero h2 {
+.overlay {
+  background-color: rgba(0, 0, 0, 0.44);
+  padding: 50px;
+  width: 70%;
+  height: 65%;
+}
+
+.heroContent {
+  text-align: center;
+  color: white;
+}
+
+.profileImage {
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.name {
+  font-size: 56px;
+  font-weight: bold;
   margin: 0;
-  font-size: 48px;
-  font-weight: 700;
+  color: white;
+  font-family: 'Raleway', sans-serif;
 }
 
-.hero p {
-  margin: 10px 0 0 0;
+.line {
+  margin: 20px auto;
+  width: 60%;
+  height: 1px;
+  background-color: white;
+}
+
+.subTitle {
   font-size: 24px;
-  color: var(--heading-color);
+  margin: 10px 0;
+  font-family: 'Roboto', sans-serif;
+  position: static;
 }
 
-.hero .btn-get-started {
-  color: var(--accent-color);
-  background: var(--accent-color);
-  font-family: var(--heading-font);
-  text-transform: uppercase;
+.button {
+  padding: 12px 40px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  background-color: #3c94af;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin-top: 30px;
 }
 
-.hero .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, white 20%);
+.newSection {
+  background-color: white;
+  color: black;
+  padding: 20px 100px;
+  text-align: left;
+  margin-top: 20px;
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
+  .heroContainer {
+    height: auto; /* Adjusts the height on mobile */
+    padding: 20px; /* Adds padding for smaller screens */
   }
-
-  .hero p {
-    font-size: 18px;
+  
+  .overlay {
+    padding: 20px;
+    width: 90%; /* Makes it more flexible for mobile */
+    height: auto; /* Allow height to adapt to content */
   }
-}
-
-.transparent-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Vertically center */
-  align-items: center; /* Horizontally center */
-  text-align: center; /* Center text inside */
-  padding: 20px;
-  padding-top: 200px;
-  background-color: rgba(0, 0, 0, 0.4); /* Adjust transparency */
-  width: 100%; /* Ensure the box uses the full width */
-  max-width: 800px; /* Optional: Limit the width if needed */
-  margin: 0 auto; /* Center the box horizontally */
-}
-
-.transparent-box h2, .transparent-box p {
-  color: #fff;
-}
-
-.profile-image {
-  width: 150px !important; /* Set fixed width */
-  height: 150px !important; /* Set fixed height */
-  border-radius: 50%; /* Make the image circular */
-  object-fit: cover; /* Maintain aspect ratio */
-  margin-bottom: 20px; /* Add space below the image */
+  
+  .name {
+    font-size: 32px; /* Adjust font size for smaller screens */
+  }
+  
+  .subTitle {
+    font-size: 16px; /* Smaller font for mobile */
+  }
+  
+  .newSection {
+    font-size: 14px;
+    padding: 15px; /* Smaller padding for mobile */
+  }
 }
 
 

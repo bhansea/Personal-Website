@@ -1,73 +1,74 @@
 "use client";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Swiper from 'swiper';
 import 'swiper/swiper-bundle.css';
 import 'glightbox/dist/css/glightbox.min.css';
-import GLightbox from 'glightbox';
 import 'aos/dist/aos.css';
-import AOS from 'aos';
-import Isotope from 'isotope-layout';
-import imagesLoaded from 'imagesloaded';
 
 import { useEffect } from 'react';
 import Head from 'next/head';
 
 const Photos = () => {
 
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-          const Isotope = require('isotope-layout');
-          const imagesLoaded = require('imagesloaded');
-      
-          const iso = new Isotope('.isotope-container', {
-            itemSelector: '.isotope-item',
-            layoutMode: 'masonry',
-          });
-      
-          imagesLoaded('.isotope-container', function () {
-            iso.layout();
-          });
-      
-          const filters = document.querySelectorAll('.portfolio-filters li');
-          filters.forEach(filter => {
-            filter.addEventListener('click', function() {
-              filters.forEach(btn => btn.classList.remove('filter-active'));
-              this.classList.add('filter-active');
-      
-              const filterValue = this.getAttribute('data-filter');
-              iso.arrange({ filter: filterValue });
-            });
-          });
-        }
-      }, []);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Lazy-load browser-specific libraries
+      const Isotope = require('isotope-layout');
+      const imagesLoaded = require('imagesloaded');
 
-      useEffect(() => {
-        const lightbox = GLightbox({
-          selector: '.glightbox',
-          touchNavigation: true,
-          loop: true,
-          zoomable: true,
-          onOpen: () => {
-            document.querySelectorAll('.gslide img').forEach((img) => {
-              img.style.maxWidth = '80vw';
-              img.style.maxHeight = '80vh';
-            });
-            document.querySelectorAll('.gdesc, .gslide-description, .gslide-title, .gdesc-inner').forEach((el) => {
-                el.style.display = 'none';
-              });
-          },
-          onSlideChanged: (slide) => {
-            const img = slide.querySelector('img');
-            if (img) {
-              img.style.maxWidth = '80vw';
-              img.style.maxHeight = '80vh';
-              img.style.width = 'auto';
-              img.style.height = 'auto';
-            }
-          },
+      const iso = new Isotope('.isotope-container', {
+        itemSelector: '.isotope-item',
+        layoutMode: 'masonry',
+      });
+
+      imagesLoaded('.isotope-container', function () {
+        iso.layout();
+      });
+
+      const filters = document.querySelectorAll('.portfolio-filters li');
+      filters.forEach(filter => {
+        filter.addEventListener('click', function() {
+          filters.forEach(btn => btn.classList.remove('filter-active'));
+          this.classList.add('filter-active');
+
+          const filterValue = this.getAttribute('data-filter');
+          iso.arrange({ filter: filterValue });
         });
-      }, []);
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      // Lazy-load GLightbox
+      const GLightbox = require('glightbox');
+
+      const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        zoomable: true,
+        onOpen: () => {
+          document.querySelectorAll('.gslide img').forEach((img) => {
+            img.style.maxWidth = '80vw';
+            img.style.maxHeight = '80vh';
+          });
+          document.querySelectorAll('.gdesc, .gslide-description, .gslide-title, .gdesc-inner').forEach((el) => {
+              el.style.display = 'none';
+            });
+        },
+        onSlideChanged: (slide) => {
+          const img = slide.querySelector('img');
+          if (img) {
+            img.style.maxWidth = '80vw';
+            img.style.maxHeight = '80vh';
+            img.style.width = 'auto';
+            img.style.height = 'auto';
+          }
+        },
+      });
+    }
+  }, []);
 
 
   return (
