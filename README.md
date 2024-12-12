@@ -1,6 +1,8 @@
 # Personal-Website
 Personal website for Brandon Luong
 
+Link: https://brandon-luong.com
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 Modules installed:
